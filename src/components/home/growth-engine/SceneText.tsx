@@ -42,7 +42,7 @@ export default function SceneText({ scene, progress }: Props) {
   return (
     <motion.div
       aria-hidden={isFinal ? undefined : true}
-      className="absolute inset-0 z-40 flex items-center justify-center px-6 sm:px-10"
+      className="absolute inset-0 z-40 flex items-start justify-center px-6 sm:px-10 pt-[160px]"
       style={{
         opacity,
         y,

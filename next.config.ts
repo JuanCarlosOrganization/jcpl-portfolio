@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   productionBrowserSourceMaps: false,
   turbopack: {
-    root: path.resolve(__dirname),
+    root: "/Users/jcpl/jcpl-portfolio",
   },
   images: {
     formats: ["image/avif", "image/webp"],

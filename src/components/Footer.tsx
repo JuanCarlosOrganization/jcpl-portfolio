@@ -128,7 +128,7 @@ export default function Footer() {
         style={{
           width: "100%",
           overflow: "hidden",
-          padding: "0 16px 24px",
+          padding: "0 12px 24px",
           marginTop: 24,
           lineHeight: 0.82,
           textAlign: "center",
@@ -141,7 +141,7 @@ export default function Footer() {
             display: "block",
             fontFamily: "var(--font-cormorant), Georgia, serif",
             fontWeight: 400,
-            fontSize: "clamp(64px, 18.5vw, 320px)",
+            fontSize: "clamp(52px, 16vw, 280px)",
             letterSpacing: "-0.02em",
             color: "#F5F0E8",
             background: "linear-gradient(180deg, #F5F0E8 0%, #D4A853 100%)",
@@ -149,6 +149,8 @@ export default function Footer() {
             backgroundClip: "text",
             WebkitTextFillColor: "transparent",
             whiteSpace: "nowrap",
+            maxWidth: "100%",
+            overflow: "hidden",
           }}
         >
           Client Growth

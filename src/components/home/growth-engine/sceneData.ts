@@ -74,7 +74,7 @@ export const SCENES: Scene[] = [
     visualType: "system-diagram",
     accent: "duo",
     ...range(6),
-    cta: { label: "Build My Growth Engine", href: "#book-call" },
+    cta: { label: "Apply to be a Partner", href: "/apply" },
   },
 ];
 

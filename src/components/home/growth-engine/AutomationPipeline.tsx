@@ -17,8 +17,8 @@ const STAGES = [
 ];
 
 const CHANNELS = [
-  { x: 92, y: 30, label: "SMS" },
-  { x: 92, y: 50, label: "EMAIL" },
+  { x: 92, y: 54, label: "SMS" },
+  { x: 92, y: 62, label: "EMAIL" },
   { x: 92, y: 70, label: "CALL" },
 ];
 
@@ -34,8 +34,8 @@ function Stage({ local, s, i }: StageProps) {
   const yOff = useTransform(stageProg, [0, 1], [3, 0]);
   return (
     <motion.g style={{ opacity: stageProg, y: yOff }}>
-      <rect x={s.x} y="46" width="14" height="8" rx="1" fill="rgba(20,16,14,0.85)" stroke="rgba(90,215,255,0.45)" strokeWidth="0.18" />
-      <text x={s.x + 7} y="50.8" fontSize="1.5" fill={ACCENT_HEX.cream} textAnchor="middle" fontFamily="ui-sans-serif, system-ui" fontWeight="700" letterSpacing="0.15">
+      <rect x={s.x} y="58" width="14" height="8" rx="1" fill="rgba(20,16,14,0.85)" stroke="rgba(90,215,255,0.45)" strokeWidth="0.18" />
+      <text x={s.x + 7} y="62.8" fontSize="1.5" fill={ACCENT_HEX.cream} textAnchor="middle" fontFamily="ui-sans-serif, system-ui" fontWeight="700" letterSpacing="0.15">
         {s.label}
       </text>
     </motion.g>
@@ -53,8 +53,8 @@ function Packet({ local, delay }: PacketProps) {
   const op = useTransform(local, [t - 0.05, t, t + 0.3, t + 0.4], [0, 1, 1, 0]);
   return (
     <motion.g style={{ opacity: op }}>
-      <motion.circle cx={xPct} cy="50" r="1.2" fill={ACCENT_HEX.cyan} />
-      <motion.circle cx={xPct} cy="50" r="2.6" fill={ACCENT_HEX.cyan} opacity="0.25" />
+      <motion.circle cx={xPct} cy="62" r="1.2" fill={ACCENT_HEX.cyan} />
+      <motion.circle cx={xPct} cy="62" r="2.6" fill={ACCENT_HEX.cyan} opacity="0.25" />
     </motion.g>
   );
 }
@@ -90,7 +90,7 @@ export default function AutomationPipeline({ scene, progress }: Props) {
     <motion.svg
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid slice"
-      className="absolute inset-0 z-30 h-full w-full"
+      className="absolute inset-0 z-30 h-full w-full overflow-hidden"
       aria-hidden="true"
     >
       <defs>
@@ -104,9 +104,9 @@ export default function AutomationPipeline({ scene, progress }: Props) {
       {/* Pipeline track */}
       <motion.line
         x1="12"
-        y1="50"
+        y1="62"
         x2="92"
-        y2="50"
+        y2="62"
         stroke={ACCENT_HEX.cyan}
         strokeWidth="0.25"
         strokeOpacity="0.5"
@@ -115,11 +115,11 @@ export default function AutomationPipeline({ scene, progress }: Props) {
       />
 
       {/* AI receptionist core, behind everything else */}
-      <motion.circle cx="52" cy="20" r="11" fill="url(#ap-ai)" style={{ opacity: aiHaloOp }} />
-      <motion.circle cx="52" cy="20" r="3" fill={ACCENT_HEX.gold} style={{ opacity: aiCoreOp }} />
+      <motion.circle cx="52" cy="32" r="11" fill="url(#ap-ai)" style={{ opacity: aiHaloOp }} />
+      <motion.circle cx="52" cy="32" r="3" fill={ACCENT_HEX.gold} style={{ opacity: aiCoreOp }} />
       <motion.text
         x="52"
-        y="32"
+        y="47"
         fontSize="1.8"
         fill={ACCENT_HEX.gold}
         textAnchor="middle"
@@ -166,7 +166,7 @@ function ConnectorLine({ local, sx, t }: ConnectorProps) {
   const op = useTransform(local, [t, t + 0.1], [0, 0.55]);
   return (
     <motion.path
-      d={`M ${sx} 46 Q ${sx} 33, 52 23`}
+      d={`M ${sx} 58 Q ${sx} 44, 52 35`}
       stroke={ACCENT_HEX.gold}
       strokeWidth="0.15"
       fill="none"

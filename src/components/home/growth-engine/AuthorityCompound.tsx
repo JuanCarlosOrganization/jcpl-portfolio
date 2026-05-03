@@ -72,7 +72,7 @@ interface OrbitNodeProps {
 }
 
 function OrbitNode({ local, n, i }: OrbitNodeProps) {
-  const cx = 25;
+  const cx = 50;
   const cy = 50;
   const r = 18;
   const rad = (n.angle * Math.PI) / 180;
@@ -112,7 +112,7 @@ export default function AuthorityCompound({ scene, progress }: Props) {
     <motion.svg
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid slice"
-      className="absolute inset-0 z-30 h-full w-full"
+      className="absolute inset-0 z-30 h-full w-full overflow-x-hidden"
       aria-hidden="true"
     >
       <defs>
@@ -122,15 +122,15 @@ export default function AuthorityCompound({ scene, progress }: Props) {
         </radialGradient>
       </defs>
 
-      {/* Authority core (left side) */}
-      <motion.circle cx="25" cy="50" r="9" fill="url(#auth-core)" style={{ opacity: coreOp }} />
-      <motion.circle cx="25" cy="50" r="2.8" fill={ACCENT_HEX.gold} style={{ opacity: coreOp }} />
+      {/* Authority core (centered) */}
+      <motion.circle cx="50" cy="50" r="9" fill="url(#auth-core)" style={{ opacity: coreOp }} />
+      <motion.circle cx="50" cy="50" r="2.8" fill={ACCENT_HEX.gold} style={{ opacity: coreOp }} />
 
       {/* Orbital ring */}
-      <motion.circle cx="25" cy="50" r="18" fill="none" stroke={ACCENT_HEX.gold} strokeWidth="0.1" strokeDasharray="0.6 1.4" style={{ opacity: ringOp }} />
+      <motion.circle cx="50" cy="50" r="18" fill="none" stroke={ACCENT_HEX.gold} strokeWidth="0.1" strokeDasharray="0.6 1.4" style={{ opacity: ringOp }} />
 
       <motion.text
-        x="25"
+        x="50"
         y="78"
         fontSize="1.6"
         fill={ACCENT_HEX.gold}
