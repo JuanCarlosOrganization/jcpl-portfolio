@@ -57,7 +57,7 @@ export default function MarketingShowcase() {
   ];
 
   return (
-    <section id="marketing-showcase" className="section">
+    <section id="marketing-showcase" className="section overflow-hidden">
       <div className="container">
         <Reveal>
           <div className="max-w-3xl mx-auto text-center">
@@ -69,10 +69,10 @@ export default function MarketingShowcase() {
             </div>
 
             <h2
-              className="leading-[1.05] mb-5"
+              className="leading-[1.05] mb-5 break-words [overflow-wrap:anywhere]"
               style={{
                 fontFamily: "var(--font-serif, 'Cormorant Garamond', serif)",
-                fontSize: "clamp(2rem, 4.5vw, 3.75rem)",
+                fontSize: "clamp(1.75rem, 6vw, 3.75rem)",
                 color: "var(--text-primary)",
                 letterSpacing: "-0.015em",
               }}
@@ -81,7 +81,7 @@ export default function MarketingShowcase() {
             </h2>
 
             <p
-              className="text-[15px] md:text-base leading-relaxed mt-2"
+              className="text-[14px] md:text-base leading-relaxed mt-2"
               style={{ color: "var(--text-body, #D2C9B8)" }}
             >
               {subline}
@@ -89,9 +89,9 @@ export default function MarketingShowcase() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 mt-12 md:mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 mt-10 md:mt-16 w-full">
           {cards.map((card, i) => (
-            <Reveal key={card.title} delay={i * 0.08}>
+            <Reveal key={card.title} delay={i * 0.08} className="w-full min-w-0">
               <FeatureCard
                 eyebrow={card.eyebrow}
                 title={card.title}

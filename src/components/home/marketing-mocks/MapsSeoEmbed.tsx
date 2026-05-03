@@ -13,8 +13,19 @@ export default function MapsSeoEmbed() {
         src="/maps-seo/index.html"
         title="SEO ranking rise"
         loading="lazy"
-        className="absolute inset-0 w-full h-full"
-        style={{ border: 0, background: "transparent", pointerEvents: "none" }}
+        scrolling="no"
+        width="1"
+        height="1"
+        className="absolute inset-0"
+        style={{
+          border: 0,
+          background: "transparent",
+          pointerEvents: "none",
+          width: "1px",
+          minWidth: "100%",
+          height: "1px",
+          minHeight: "100%",
+        }}
         sandbox="allow-scripts allow-same-origin"
       />
       <div
