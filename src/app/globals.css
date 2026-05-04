@@ -1747,7 +1747,8 @@ body::after {
     padding: 0 18px;
   }
   .services-stack-card {
-    position: static;
+    /* Keep position: sticky from the base rule so the fanned-deck
+       scroll-trigger effect runs on mobile too. */
     grid-template-columns: 1fr;
     margin-bottom: 20px;
     border-radius: 16px;
@@ -1759,6 +1760,21 @@ body::after {
   }
   .services-stack-text {
     padding: 24px 22px 26px;
+  }
+}
+
+/* ── Growth Engine visuals: dezoom on mobile by constraining the SVG/Canvas
+   host to a square area centered in the pinned viewport. The visuals use
+   viewBox 0 0 100 100 with preserveAspectRatio="xMidYMid slice" — when the
+   host is portrait, slice crops the sides and the design looks zoomed in.
+   A square host renders the full viewBox without cropping. Desktop is
+   untouched (still full-bleed inset-0). */
+@media (max-width: 767px) {
+  .growth-engine-visual-host {
+    inset: auto 0;
+    top: 50%;
+    height: min(100vw, 62vh);
+    transform: translateY(-50%);
   }
 }
 

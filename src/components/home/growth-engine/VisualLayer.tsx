@@ -23,7 +23,7 @@ export default function VisualLayer({ progress }: Props) {
   const scene7 = SCENES[6];
 
   return (
-    <div className="absolute inset-0 z-20">
+    <div className="growth-engine-visual-host absolute inset-0 z-20">
       {/* EngineCore is special — visible during BOTH scene 1 and scene 7,
           so it manages its own visibility internally rather than going
           through SceneVisualGate. */}
