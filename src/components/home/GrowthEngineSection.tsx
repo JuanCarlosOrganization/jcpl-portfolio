@@ -21,18 +21,23 @@ const DEBUG = process.env.NODE_ENV === "development";
 export default function GrowthEngineSection() {
   const reduced = usePrefersReducedMotionSafe();
   const [layout, setLayout] = useState<"loading" | "desktop" | "static">("loading");
+  const [isCompact, setIsCompact] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const pinRef = useRef<HTMLDivElement>(null);
   const progress = useMotionValue(0);
   const [particlesActive, setParticlesActive] = useState(false);
 
-  // Layout decision — desktop pinned vs static stacked
+  // Layout decision — pinned scroll on every device unless reduced motion.
+  // Track a `compact` flag so mobile gets a lighter particle density.
   useEffect(() => {
-    const mq = window.matchMedia("(min-width: 768px) and (hover: hover)");
-    const update = () => setLayout(reduced || !mq.matches ? "static" : "desktop");
+    const compactMq = window.matchMedia("(max-width: 767px)");
+    const update = () => {
+      setLayout(reduced ? "static" : "desktop");
+      setIsCompact(compactMq.matches);
+    };
     update();
-    mq.addEventListener?.("change", update);
-    return () => mq.removeEventListener?.("change", update);
+    compactMq.addEventListener?.("change", update);
+    return () => compactMq.removeEventListener?.("change", update);
   }, [reduced]);
 
   // Pin + progress sync (desktop only)
@@ -131,7 +136,7 @@ export default function GrowthEngineSection() {
         </div>
 
         {/* Layered visuals */}
-        <ParticleField active={particlesActive} density="desktop" />
+        <ParticleField active={particlesActive} density={isCompact ? "tablet" : "desktop"} />
         <VisualLayer progress={progress} />
 
         {/* Scene text — all stacked, opacity-gated. Only one visible at a time. */}
