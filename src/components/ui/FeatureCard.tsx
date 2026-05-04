@@ -27,7 +27,7 @@ export default function FeatureCard({
       radius="xl"
       padding="none"
       className={cn(
-        "flex flex-col h-full aspect-[5/4] md:aspect-[4/5] min-h-[420px]",
+        "flex flex-col h-full w-full max-w-full md:aspect-[4/5] min-h-[360px] md:min-h-[420px]",
         className,
       )}
     >
@@ -39,8 +39,8 @@ export default function FeatureCard({
         }}
       />
 
-      <div className="relative z-10 flex flex-col h-full p-6 md:p-8">
-        <header className="mb-5">
+      <div className="relative z-10 flex flex-col h-full p-5 md:p-8">
+        <header className="mb-4 md:mb-5">
           {eyebrow ? (
             <div
               className="mb-3 text-[11px] font-medium tracking-[0.18em] uppercase"
@@ -50,10 +50,10 @@ export default function FeatureCard({
             </div>
           ) : null}
           <h3
-            className="font-serif leading-[1.1]"
+            className="font-serif leading-[1.15] break-words [overflow-wrap:anywhere]"
             style={{
               fontFamily: "var(--font-serif, 'Cormorant Garamond', serif)",
-              fontSize: "clamp(1.5rem, 2.2vw, 2rem)",
+              fontSize: "clamp(1.25rem, 4.4vw, 2rem)",
               color: "var(--text-primary)",
               letterSpacing: "-0.01em",
             }}
@@ -62,7 +62,7 @@ export default function FeatureCard({
           </h3>
         </header>
 
-        <div className="relative flex-1 min-h-0">{visual}</div>
+        <div className="relative flex-1 min-h-[200px]">{visual}</div>
       </div>
     </PremiumFrame>
   );
