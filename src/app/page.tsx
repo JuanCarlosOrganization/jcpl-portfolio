@@ -15,7 +15,6 @@ const ProblemGrid = dynamic(() => import("@/components/home/ProblemGrid"));
 const GrowthEngineSection = dynamic(() => import("@/components/home/GrowthEngineSection"), {
   loading: () => <div style={{ minHeight: "100vh" }} aria-hidden="true" />,
 });
-const SystemPerspectiveCarousel = dynamic(() => import("@/components/home/SystemPerspectiveCarousel"));
 const WhatIBuildSlider = dynamic(() => import("@/components/home/WhatIBuildSlider"));
 const CaseStudyStackScroll = dynamic(() => import("@/components/home/CaseStudyStackScroll"));
 const DiagnosticForm = dynamic(() => import("@/components/home/DiagnosticFormLinear"));
@@ -56,11 +55,6 @@ export default function HomePage() {
 
       {/* 3b. The Growth Engine — cinematic system story (id="growth-engine") */}
       <GrowthEngineSection />
-
-      <SectionDivider />
-
-      {/* 3c. Inside the System — 3D perspective carousel of 4 pillars */}
-      <SystemPerspectiveCarousel />
 
       <SectionDivider />
 
