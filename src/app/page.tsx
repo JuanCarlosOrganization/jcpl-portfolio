@@ -15,9 +15,10 @@ const ProblemGrid = dynamic(() => import("@/components/home/ProblemGrid"));
 const GrowthEngineSection = dynamic(() => import("@/components/home/GrowthEngineSection"), {
   loading: () => <div style={{ minHeight: "100vh" }} aria-hidden="true" />,
 });
+const SystemPerspectiveCarousel = dynamic(() => import("@/components/home/SystemPerspectiveCarousel"));
 const WhatIBuildSlider = dynamic(() => import("@/components/home/WhatIBuildSlider"));
-const CaseStudyMarqueeSection = dynamic(() => import("@/components/home/CaseStudyMarqueeSection"));
-const DiagnosticForm = dynamic(() => import("@/components/home/DiagnosticForm"));
+const CaseStudyStackScroll = dynamic(() => import("@/components/home/CaseStudyStackScroll"));
+const DiagnosticForm = dynamic(() => import("@/components/home/DiagnosticFormLinear"));
 const FAQ = dynamic(() => import("@/components/sections/FAQ"));
 const StickyMobileCTA = dynamic(() => import("@/components/home/StickyMobileCTA"));
 
@@ -58,13 +59,18 @@ export default function HomePage() {
 
       <SectionDivider />
 
+      {/* 3c. Inside the System — 3D perspective carousel of 4 pillars */}
+      <SystemPerspectiveCarousel />
+
+      <SectionDivider />
+
       {/* 4. What I Build (id="services") */}
       <WhatIBuildSlider />
 
       <SectionDivider />
 
-      {/* 5. Case Study Proof Marquee (id="testimonials") */}
-      <CaseStudyMarqueeSection />
+      {/* 5. Case Study Stack Scroll (id="testimonials") */}
+      <CaseStudyStackScroll />
 
       <SectionDivider />
 
