@@ -1,23 +1,23 @@
 import Script from "next/script";
 
 /**
- * ClarityScript — mounts the Microsoft Clarity session recording and
+ * ClarityScript. Mounts the Microsoft Clarity session recording and
  * heatmapping SDK globally.
  *
  * Configuration: set NEXT_PUBLIC_CLARITY_PROJECT_ID in your environment.
  * The component renders nothing if the env var is absent, so it is
  * safe in all environments where Clarity is not configured.
  *
- * Loading strategy: lazyOnload — defers until the page is idle so it
+ * Loading strategy: lazyOnload. Defers until the page is idle so it
  * does not affect LCP, FID, or any critical rendering path.
  */
 export default function ClarityScript() {
   const clarityId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID;
 
-  // Bail silently — no crash, no console noise in environments without Clarity
+  // Bail silently. No crash, no console noise in environments without Clarity
   if (!clarityId) return null;
 
-  // Project IDs are alphanumeric — strip anything else as a safety guard
+  // Project IDs are alphanumeric. Strip anything else as a safety guard
   const safeId = clarityId.replace(/[^a-zA-Z0-9]/g, "");
   if (!safeId) return null;
 

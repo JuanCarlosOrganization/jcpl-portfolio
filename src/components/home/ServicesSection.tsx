@@ -92,10 +92,10 @@ export default function ServicesSection() {
             padding: "36px 28px 28px",
           }}
         >
-          {/* Phases wrapper — horizontal on desktop, vertical on mobile */}
+          {/* Phases wrapper. Horizontal on desktop, vertical on mobile */}
           <div ref={phasesRef} className="phases-wrapper flex flex-col md:flex-row md:items-start md:gap-0">
 
-            {/* Phase 01 — Attract */}
+            {/* Phase 01. Attract */}
             <div className="phase flex-1 md:pr-6 md:border-r" style={{ borderColor: "rgba(212,168,83,0.12)" }}>
               <div className="phase-header mb-4">
                 <span
@@ -137,7 +137,7 @@ export default function ServicesSection() {
               </ul>
             </div>
 
-            {/* Arrow — desktop only */}
+            {/* Arrow. Desktop only */}
             <div
               className="hidden md:flex items-center justify-center flex-shrink-0"
               style={{ width: 40, paddingTop: 8 }}
@@ -160,7 +160,7 @@ export default function ServicesSection() {
               </svg>
             </div>
 
-            {/* Phase 02 — Convert */}
+            {/* Phase 02. Convert */}
             <div className="phase flex-1 md:px-6 md:border-r" style={{ borderColor: "rgba(212,168,83,0.12)" }}>
               <div className="phase-header mb-4">
                 <span
@@ -202,7 +202,7 @@ export default function ServicesSection() {
               </ul>
             </div>
 
-            {/* Arrow — desktop only */}
+            {/* Arrow. Desktop only */}
             <div
               className="hidden md:flex items-center justify-center flex-shrink-0"
               style={{ width: 40, paddingTop: 8 }}
@@ -225,7 +225,7 @@ export default function ServicesSection() {
               </svg>
             </div>
 
-            {/* Phase 03 — Compound */}
+            {/* Phase 03. Compound */}
             <div className="phase flex-1 md:pl-6">
               <div className="phase-header mb-4">
                 <span

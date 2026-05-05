@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════
-   HERO — Responsive + Premium Animations
+   HERO. Responsive + Premium Animations
    ═══════════════════════════════════════════════════ */
 
 /* ── Keyframes ── */
@@ -30,7 +30,7 @@
     animation: hero-fade-in-up 0.7s ease-out 0.55s forwards !important;
   }
 
-  /* Primary CTA — breathing gold glow */
+  /* Primary CTA. breathing gold glow */
   .hero-cta-primary {
     animation:
       hero-fade-in-up 0.7s ease-out 0.55s forwards,

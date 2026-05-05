@@ -5,7 +5,7 @@ import { useLocale } from "@/context/LocaleContext";
 import { translations } from "@/lib/translations";
 
 /**
- * MetricsRow — inline stat tiles with vertical dividers.
+ * MetricsRow. Inline stat tiles with vertical dividers.
  * Engineered baseline look. Compact, no dead space.
  */
 export default function MetricsRow() {

@@ -28,7 +28,7 @@ export default function PricingSection() {
             Choose Your Growth Stage
           </h2>
           <p className="mt-4 text-[var(--text-secondary)] text-lg max-w-xl mx-auto">
-            Pick the plan that matches where you are — and where you want to be.
+            Pick the plan that matches where you are. And where you want to be.
           </p>
         </Reveal>
 

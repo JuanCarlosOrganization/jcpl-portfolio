@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { isQualifiedLead } from "@/lib/content";
 
-// Verified sender address — requires clientgrowth.ca domain verified in Resend dashboard
+// Verified sender address. Requires clientgrowth.ca domain verified in Resend dashboard
 const FROM_ADDRESS = "Client Growth <noreply@clientgrowth.ca>";
 const OWNER_EMAIL = "juan@clientgrowth.ca";
 
@@ -38,8 +38,8 @@ export async function POST(req: NextRequest) {
       from: FROM_ADDRESS,
       to: OWNER_EMAIL,
       subject: qualified
-        ? `New qualified lead: ${name} — ${businessType}`
-        : `New application (nurture): ${name} — ${businessType}`,
+        ? `New qualified lead: ${name}. ${businessType}`
+        : `New application (nurture): ${name}. ${businessType}`,
       html: `
         <!DOCTYPE html>
         <html lang="en">
@@ -61,7 +61,7 @@ export async function POST(req: NextRequest) {
               ["Lead source", leadSource],
               ["Ad budget", adBudget],
               ["Business name", businessName],
-              ["Business website", businessWebsite || "—"],
+              ["Business website", businessWebsite || ","],
               ["90-day goal", goal],
               ["Timeline", timeline],
             ]
@@ -97,7 +97,7 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from: FROM_ADDRESS,
       to: email,
-      subject: "Application received — Client Growth",
+      subject: "Application received. Client Growth",
       html: `
         <!DOCTYPE html>
         <html lang="en">

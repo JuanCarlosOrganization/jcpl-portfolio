@@ -80,7 +80,7 @@ export default function Mock3ConvertingSite() {
           </div>
 
           <div className="grid grid-cols-2 gap-2">
-            <StatChip label="Conv. rate" value="4.8%" />
+            <StatChip label="Conv. Rate" value="4.8%" />
             <StatChip label="Book rate" value="38%" />
           </div>
         </div>

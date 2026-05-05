@@ -10,11 +10,11 @@ export default function FinalConvictionSection() {
   const embedRef = useRef<HTMLDivElement>(null);
 
   // Load UnicornStudio script and call init() once the embed div is in the DOM.
-  // The guard handles: script already loaded (SPA navigation) vs. first load.
+  // The guard handles: script already loaded (SPA navigation) vs. First load.
   useEffect(() => {
     const win = window as any;
     if (win.UnicornStudio?.init) {
-      // Library already present — just re-init to pick up this div
+      // Library already present. Just re-init to pick up this div
       win.UnicornStudio.init();
     } else {
       win.UnicornStudio = { isInitialized: false };
@@ -25,7 +25,7 @@ export default function FinalConvictionSection() {
     }
   }, []);
 
-  // Cursor → click forwarding — makes the horse react to hover/proximity.
+  // Cursor → click forwarding. Makes the horse react to hover/proximity.
   // UnicornStudio's project has an "on click" trigger; by dispatching a synthetic
   // click at the cursor position on every pointer move (RAF-throttled), the horse
   // tracks the cursor continuously without requiring an actual user click.
@@ -47,7 +47,7 @@ export default function FinalConvictionSection() {
       const canvas = embed!.querySelector("canvas");
       if (!canvas) return;
 
-      // Dispatch a synthetic click at the real cursor position — UnicornStudio's
+      // Dispatch a synthetic click at the real cursor position. UnicornStudio's
       // click listener moves the horse toward that point.
       canvas.dispatchEvent(
         new MouseEvent("click", {
@@ -65,7 +65,7 @@ export default function FinalConvictionSection() {
       if (rafId === null) rafId = requestAnimationFrame(flush);
     }
 
-    // passive:true — never blocks page scroll on touch devices
+    // passive:true. Never blocks page scroll on touch devices
     wrap.addEventListener("pointermove", onPointerMove, { passive: true });
 
     return () => {
@@ -109,7 +109,7 @@ export default function FinalConvictionSection() {
         />
       </div>
 
-      {/* ── Single CTA — anchored directly below the knight ── */}
+      {/* ── Single CTA. anchored directly below the knight ── */}
       <div className="flex justify-center px-4 py-12 md:py-16">
         <CTAButton href="/apply" size="lg">
           {t<string>("finalCta.button")}

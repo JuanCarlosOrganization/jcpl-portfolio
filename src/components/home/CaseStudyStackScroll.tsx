@@ -28,7 +28,7 @@ const cases: CaseStudyData[] = [
     city: "Texas",
     image: "/images/testimonials/tyler-w.webp",
     metric: { value: "$41,085", label: "revenue in 30 days" },
-    quote: "From $900/month to a $41K month — every system shipping on time.",
+    quote: "From $900/month to a $41K month. Every system shipping on time.",
     tags: [
       "Premium custom website",
       "Google Ads funnel",
@@ -69,7 +69,19 @@ const cases: CaseStudyData[] = [
     city: "DFW, Texas",
     image: "/images/owners/wesley-absolute-painting.webp",
     metric: { value: "In Progress", label: "premium website launching soon" },
-    quote: "Building the engine right now — DFW market, full conversion site.",
+    quote: "Building the engine right now. DFW market, full conversion site.",
+    tags: ["Premium custom website"],
+    href: "/#testimonials",
+  },
+  {
+    id: "centre-dentaire",
+    industry: "Dental Clinic",
+    ownerName: "Dre Benyoucef",
+    company: "Centre Dentaire Saint-Élzéar",
+    city: "Laval, QC",
+    image: "/images/owners/dre-benyoucef-centre-dentaire.webp",
+    metric: { value: "Live", label: "premium custom website delivered" },
+    quote: "Patients book themselves. The chair is full every week.",
     tags: ["Premium custom website"],
     href: "/#testimonials",
   },
@@ -94,7 +106,7 @@ export default function CaseStudyStackScroll() {
         background: "#0D0B09",
       }}
     >
-      {/* Section header — Stripe-style: bold direct headline, no eyebrow */}
+      {/* Section header. Stripe-style: bold direct headline, no eyebrow */}
       <div
         style={{
           position: "sticky",
@@ -243,7 +255,7 @@ function CaseCard({
         >
           <Image
             src={caseItem.image}
-            alt={`${caseItem.ownerName} — ${caseItem.company}`}
+            alt={`${caseItem.ownerName}. ${caseItem.company}`}
             fill
             sizes="(max-width: 768px) 96vw, (max-width: 1024px) 100vw, 1180px"
             quality={isMobile ? 80 : 90}
@@ -253,7 +265,7 @@ function CaseCard({
               objectPosition: "center 30%",
             }}
           />
-          {/* Warm dark gradient overlay — heavier on mobile so text reads better */}
+          {/* Warm dark gradient overlay. Heavier on mobile so text reads better */}
           <div
             style={{
               position: "absolute",
@@ -316,7 +328,7 @@ function CaseCard({
           </span>
         </div>
 
-        {/* Bottom content cluster — single column on mobile, 2-col on desktop */}
+        {/* Bottom content cluster. Single column on mobile, 2-col on desktop */}
         <div
           style={{
             position: "absolute",
@@ -435,7 +447,7 @@ function CaseCard({
             </div>
           </div>
 
-          {/* Desktop right column — hidden on mobile (metric handled above) */}
+          {/* Desktop right column. Hidden on mobile (metric handled above) */}
           {!isMobile && (
             <div
               style={{
@@ -602,7 +614,7 @@ function CaseCard({
           )}
         </div>
 
-        {/* Card index pip on right edge — hidden on mobile (saves space, identity strip already wraps) */}
+        {/* Card index pip on right edge. Hidden on mobile (saves space, identity strip already wraps) */}
         <div
           style={{
             position: "absolute",

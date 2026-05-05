@@ -27,7 +27,7 @@ export default function GrowthEngineSection() {
   const progress = useMotionValue(0);
   const [particlesActive, setParticlesActive] = useState(false);
 
-  // Layout decision — pinned scroll on every device unless reduced motion.
+  // Layout decision. Pinned scroll on every device unless reduced motion.
   // Track a `compact` flag so mobile gets a lighter particle density.
   useEffect(() => {
     const compactMq = window.matchMedia("(max-width: 767px)");
@@ -61,7 +61,7 @@ export default function GrowthEngineSection() {
         onLeaveBack: () => setParticlesActive(false),
       });
 
-      // Refresh on font load — headlines change height
+      // Refresh on font load. Headlines change height
       if (typeof document !== "undefined" && document.fonts?.ready) {
         document.fonts.ready.then(() => ScrollTrigger.refresh());
       }
@@ -139,7 +139,7 @@ export default function GrowthEngineSection() {
         <ParticleField active={particlesActive} density={isCompact ? "tablet" : "desktop"} />
         <VisualLayer progress={progress} />
 
-        {/* Scene text — all stacked, opacity-gated. Only one visible at a time. */}
+        {/* Scene text. All stacked, opacity-gated. Only one visible at a time. */}
         {SCENES.map((s) => (
           <SceneText key={s.id} scene={s} progress={progress} />
         ))}

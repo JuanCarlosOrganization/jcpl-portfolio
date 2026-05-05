@@ -4,7 +4,7 @@ import { ReactNode, forwardRef } from "react";
 import { cn } from "@/lib/utils";
 
 /**
- * PremiumFrame — Unified premium surface system
+ * PremiumFrame. Unified premium surface system
  * 
  * Replaces inconsistent card styling with a cohesive premium look:
  * - Subtle gradient surface
@@ -111,7 +111,7 @@ PremiumFrame.displayName = "PremiumFrame";
 export default PremiumFrame;
 
 /**
- * PremiumFrameGlow — Optional inner glow overlay for featured cards
+ * PremiumFrameGlow. Optional inner glow overlay for featured cards
  */
 export function PremiumFrameGlow({
   color = "accent",

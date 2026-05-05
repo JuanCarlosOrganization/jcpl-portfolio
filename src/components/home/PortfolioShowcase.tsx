@@ -53,7 +53,7 @@ const websiteProjects: Project[] = [
     heroScreenshot: "/images/portfolio/culture-hero.webp",
     slides: [
       { image: "/images/portfolio/culture-desktop.webp", caption: "Brand identity translated into a booking machine" },
-      { image: "/images/portfolio/culture-mobile.webp", caption: "Clients book directly from Google — zero friction" },
+      { image: "/images/portfolio/culture-mobile.webp", caption: "Clients book directly from Google. Zero friction" },
       { image: "/images/portfolio/culture-booking.webp", caption: "Integrated booking flow. No call needed to book." },
     ],
     liveUrl: "https://culturebarbershop.com",
@@ -142,7 +142,7 @@ export default function PortfolioShowcase() {
           fontSize: "18px", fontWeight: 400, lineHeight: 1.65, opacity: 0.68,
           maxWidth: "520px", margin: "0 auto", color: "white",
         }}>
-          Every website I build is fully custom coded — designed around your
+          Every website I build is fully custom coded. Designed around your
           brand, your market, and one outcome: qualified calls on your calendar.
         </p>
       </Reveal>
@@ -216,7 +216,7 @@ export default function PortfolioShowcase() {
                     </span>
                   </div>
                 </div>
-                {/* Footer — row layout */}
+                {/* Footer. Row layout */}
                 <div style={{ padding: "20px 24px 22px", display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "16px" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
                     <Image src={p.logo} alt={p.businessName} width={120} height={30} quality={75} sizes="30px" style={{ height: "30px", width: "auto", objectFit: "contain", opacity: 0.88 }} onError={hideImg} />
@@ -294,7 +294,7 @@ export default function PortfolioShowcase() {
                     </span>
                   </div>
                 </div>
-                {/* Footer — stacked layout */}
+                {/* Footer. Stacked layout */}
                 <div style={{ padding: "20px 24px 22px" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "10px" }}>
                     <Image src={p.logo} alt={p.businessName} width={120} height={28} quality={75} sizes="28px" style={{ height: "28px", width: "auto", objectFit: "contain", opacity: 0.88 }} onError={hideImg} />

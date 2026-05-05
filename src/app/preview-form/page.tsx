@@ -1,6 +1,6 @@
 import DiagnosticFormLinear from "@/components/home/DiagnosticFormLinear";
 
-export const metadata = { title: "Preview — Diagnostic Form" };
+export const metadata = { title: "Preview. Diagnostic Form" };
 
 export default function PreviewFormPage() {
   return (

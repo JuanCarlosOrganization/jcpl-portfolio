@@ -83,7 +83,7 @@ export default function CaseStudyDetail({
         />
         <div className="relative max-w-[1120px] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-12 items-center">
-            {/* Left column — content */}
+            {/* Left column. Content */}
             <div>
               <div className="text-[11px] uppercase tracking-[0.12em] text-sv-text-sub mb-4">
                 {cs.industry}
@@ -103,7 +103,7 @@ export default function CaseStudyDetail({
                   <span className="inline-flex items-center gap-2 bg-[rgba(212,168,83,0.08)] border border-[rgba(212,168,83,0.2)] rounded-full px-5 py-[6px]">
                     <PulseDot size={6} />
                     <span className="text-[13px] text-sv-text-sub font-medium">
-                      Results loading — system just launched
+                      Results loading. System just launched
                     </span>
                   </span>
                 </div>
@@ -168,7 +168,7 @@ export default function CaseStudyDetail({
               </div>
             </div>
 
-            {/* Right column — frozen preview */}
+            {/* Right column. Frozen preview */}
             <div className="w-full mt-8 lg:mt-0">
               <div className="rounded-[14px] border border-[rgba(37,99,235,0.15)] overflow-hidden">
                 <FrozenWebsitePreview
@@ -184,7 +184,7 @@ export default function CaseStudyDetail({
         </div>
       </div>
 
-      {/* ═══ SECTION B — THE SITUATION ═══ */}
+      {/* ═══ SECTION B. THE SITUATION ═══ */}
   <section className="bg-sv-surface py-16 border-t border-[rgba(37,99,235,0.06)]">
         <div className="max-w-[760px] mx-auto px-6">
           <span className="block text-[10px] uppercase tracking-[0.15em] text-sv-text-sub mb-4">
@@ -201,7 +201,7 @@ export default function CaseStudyDetail({
         </div>
       </section>
 
-      {/* ═══ SECTION C — WHAT WAS BUILT ═══ */}
+      {/* ═══ SECTION C. WHAT WAS BUILT ═══ */}
       {cs.deliverables && cs.deliverables.length > 0 && (
   <section className="bg-sv-base py-16">
           <div className="max-w-[760px] mx-auto px-6">
@@ -255,7 +255,7 @@ export default function CaseStudyDetail({
         </section>
       )}
 
-      {/* ═══ SECTION D — METRICS (hidden when inProgress) ═══ */}
+      {/* ═══ SECTION D. METRICS (hidden when inProgress) ═══ */}
       {!cs.inProgress && cs.metricsImageUrl && (
         <section
           id="metrics-section"
@@ -288,7 +288,7 @@ export default function CaseStudyDetail({
         </section>
       )}
 
-      {/* ═══ SECTION E — FINAL CTA ═══ */}
+      {/* ═══ SECTION E. FINAL CTA ═══ */}
       <section
         className="relative py-28 border-t border-[rgba(212,168,83,0.06)] overflow-hidden"
         style={{ backgroundColor: "#131009" }}

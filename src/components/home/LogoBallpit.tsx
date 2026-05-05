@@ -55,7 +55,7 @@ function makeCircleMask(): CanvasTexture {
 
 // ─── Subsurface-scattering material ───────────────────────────────────────────
 // Adds a real-time scattering term on top of MeshPhysicalMaterial so balls feel
-// translucent and lit from within — matching the premium Ballpit look.
+// translucent and lit from within. Matching the premium Ballpit look.
 
 class BallMaterial extends MeshPhysicalMaterial {
   declare uniforms: Record<string, { value: number }>;
@@ -161,7 +161,7 @@ class Physics {
   init() {
     const { config: c, positionData: p } = this;
     this.center.toArray(p, 0); // ball 0 at world center
-    // Balls 1-N evenly spaced around a ring — intentional start composition.
+    // Balls 1-N evenly spaced around a ring. Intentional start composition.
     // RING_R=2.5 fits comfortably within any viewport; center attraction +
     // physics will spread them naturally from this base arrangement.
     const RING_R = 5.0; // larger ring for bigger balls so they don't all start overlapping
@@ -234,7 +234,7 @@ class Physics {
   }
 }
 
-// ─── Per-ball colors — dark navy tones matching brand ─────────────────────────
+// ─── Per-ball colors. Dark navy tones matching brand ─────────────────────────
 
 const BALL_COLORS = [
   new Color("#0c2340"),
@@ -289,14 +289,14 @@ export default function LogoBallpit({
     // ── Lights ──
     const ambient = new AmbientLight(0xffffff, 1.1);
     const point   = new PointLight(0x4488ff, 160);
-    point.position.set(3, 4, 8); // fixed — not tracking any ball
+    point.position.set(3, 4, 8); // fixed. Not tracking any ball
     scene.add(ambient, point);
 
     // ── Physics ──
     const physCfg: PhysicsConfig = {
       count:          ballCount,
-      minSize:        2.8,     // 3× bigger (was 0.92) — ~95px diameter on screen
-      maxSize:        4.0,     // 3× bigger (was 1.35) — ~135px diameter on screen
+      minSize:        2.8,     // 3× bigger (was 0.92). ~95px diameter on screen
+      maxSize:        4.0,     // 3× bigger (was 1.35). ~135px diameter on screen
       size0:          3.4,     // 3× bigger (was 1.10)
       gravity:        0,       // zero gravity → floating cluster (no bottom-piling)
       friction:       0.988,   // strong damping → balls slow fast, premium feel
@@ -336,7 +336,7 @@ export default function LogoBallpit({
       (mat as any).envMapRotation.x = -Math.PI / 2;
       group.add(new Mesh(sphereGeo, mat));
 
-      // Logo plane — only for balls that have a matching logo
+      // Logo plane. Only for balls that have a matching logo
       if (i < logos.length) {
         const logoMat = new MeshBasicMaterial({
           transparent: true,
@@ -359,7 +359,7 @@ export default function LogoBallpit({
     }
 
     // ── Load logo textures via Next.js image proxy (avoids CORS entirely) ──
-    // /_next/image is served from the SAME origin — no cross-origin request.
+    // /_next/image is served from the SAME origin. No cross-origin request.
     // Shopify CDN + Wixstatic are already in next.config.ts remotePatterns.
     const loader = new TextureLoader();
     logos.forEach((item, i) => {
@@ -397,7 +397,7 @@ export default function LogoBallpit({
     const resizeObs = new ResizeObserver(resize);
     resizeObs.observe(wrap);
 
-    // ── Intersection observer — pause RAF when off-screen ──
+    // ── Intersection observer. Pause RAF when off-screen ──
     let visible = false;
     const intObs = new IntersectionObserver(([e]) => { visible = e.isIntersecting; }, { threshold: 0 });
     intObs.observe(canvas);
@@ -415,7 +415,7 @@ export default function LogoBallpit({
       const delta = Math.min(clock.getDelta(), 0.05);
 
       if (!reduced) {
-        // Center attraction — gently pulls each ball toward world origin.
+        // Center attraction. Gently pulls each ball toward world origin.
         // Prevents wall-camping; keeps the cluster visually intentional.
         // Runs before physics.update() so friction + wall-bounce process it.
         const CENTER_STR = physics.config.centerStr ?? 0.0018;

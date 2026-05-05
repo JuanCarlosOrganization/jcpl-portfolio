@@ -15,7 +15,7 @@ interface Props {
 }
 
 /**
- * OperatingPrinciples — three numbered operating principles
+ * OperatingPrinciples. Three numbered operating principles
  * with StarBorder containers and staggered reveal.
  */
 export default function OperatingPrinciples({ principles }: Props) {

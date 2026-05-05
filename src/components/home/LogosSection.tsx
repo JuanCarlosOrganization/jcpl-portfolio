@@ -4,7 +4,7 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import SectionLabel from "@/components/ui/SectionLabel";
 import { Reveal } from "@/components/motion";
 
-/* ─── Industries served — honest, verifiable ─── */
+/* ─── Industries served. Honest, verifiable ─── */
 const INDUSTRIES = [
   { category: "RV Rentals", detail: "Fleet-based rental operations" },
   { category: "Barbershops", detail: "Premium grooming studios" },
@@ -14,7 +14,7 @@ const INDUSTRIES = [
   { category: "Multi-Location", detail: "Scalable growth frameworks" },
 ];
 
-/* ─── Tech stack — what the systems are built with ─── */
+/* ─── Tech stack. What the systems are built with ─── */
 const STACK = [
   "Next.js",
   "React",

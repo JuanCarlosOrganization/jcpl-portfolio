@@ -43,7 +43,7 @@ export default function ResultsHeroWebGL() {
             lazyLoad={true}
           />
         )}
-        {/* Reduced motion: static fallback — dark panel, no animation */}
+        {/* Reduced motion: static fallback. Dark panel, no animation */}
         {mounted && prefersReducedMotion && (
           <div className="w-full h-full bg-sv-surface" aria-hidden="true" />
         )}

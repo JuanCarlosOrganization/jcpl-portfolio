@@ -8,7 +8,7 @@ import { trackEvent } from "@/lib/analytics";
 
 /* ═══════════════════════════════════════════════════════════
    DREAM-OUTCOME SVG ILLUSTRATIONS
-   Minimal, abstract, premium — inspired by Linear/Stripe.
+   Minimal, abstract, premium. Inspired by Linear/Stripe.
    ═══════════════════════════════════════════════════════════ */
 
 function FoundationSVG() {
@@ -194,7 +194,7 @@ export default function ServiceCard({ tier, index }: Props) {
           {tier.coreOutcome}
         </p>
 
-        {/* Deliverables — max 5 visible */}
+        {/* Deliverables. Max 5 visible */}
         <div className="service-card__deliverables">
           <ul className="space-y-1.5" role="list" aria-label={`${tier.name} deliverables`}>
             {tier.deliverables.map((d, j) => (
@@ -254,7 +254,7 @@ export default function ServiceCard({ tier, index }: Props) {
           </button>
         </div>
 
-        {/* Timeline + First Win — compact row */}
+        {/* Timeline + First Win. Compact row */}
         <div className="service-card__meta">
           <div className="service-card__meta-item">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
@@ -269,7 +269,7 @@ export default function ServiceCard({ tier, index }: Props) {
           </p>
         </div>
 
-        {/* CTA — plan-specific */}
+        {/* CTA. plan-specific */}
         <CTAButton
           href={`/apply?tier=${encodeURIComponent(tier.name)}`}
           variant={tier.featured ? "primary" : "secondary"}

@@ -30,7 +30,7 @@ const servicesEn = {
     },
     {
       num: "04",
-      name: "GEO — AI Search",
+      name: "GEO. AI Search",
       body: "When someone asks ChatGPT, Perplexity, or Google AI 'best [service] near me,' your business needs to be the answer. This is the new SEO. Most competitors do not have it yet.",
       outcome: "Visible before your competitors know this exists.",
     },
@@ -76,7 +76,7 @@ const servicesFr = {
     },
     {
       num: "04",
-      name: "GEO — Visibilité IA",
+      name: "GEO. Visibilité IA",
       body: "Quand quelqu'un demande à ChatGPT 'meilleur [service] près de moi,' votre entreprise doit être la réponse. C'est le nouveau référencement. La plupart des concurrents ne l'ont pas encore.",
       outcome: "Visible avant que vos concurrents le sachent.",
     },
@@ -144,7 +144,7 @@ export default function ServicesGrid() {
           </p>
         </Reveal>
 
-        {/* 6 cards — 2 column grid */}
+        {/* 6 cards. 2 column grid */}
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 mb-12">
           {t.cards.map((s, i) => (
             <Reveal key={s.num} delay={i * 0.06}>

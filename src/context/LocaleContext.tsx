@@ -38,7 +38,7 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const setLocale = useCallback((_next: Locale) => {
-    // English-only site — locale switching is intentionally a no-op.
+    // English-only site. Locale switching is intentionally a no-op.
   }, []);
 
   const t = useCallback(

@@ -225,7 +225,7 @@ function FramedImage({
   return <BrowserFrame url={service.frameUrl} badge={service.badge}>{img}</BrowserFrame>;
 }
 
-/* ── Main Component — Click-only tab navigation ── */
+/* ── Main Component. Click-only tab navigation ── */
 
 export function VerticalTabs() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -294,7 +294,7 @@ export function VerticalTabs() {
                         paddingBottom: "clamp(24px, 3vw, 32px)",
                       }}
                     >
-                      {/* Gold left border — active indicator */}
+                      {/* Gold left border. Active indicator */}
                       <div
                         className="absolute left-[-16px] md:left-[-24px] top-0 bottom-0 w-[3px]"
                         style={{
@@ -335,7 +335,7 @@ export function VerticalTabs() {
                           {service.title}
                         </span>
 
-                        {/* Expandable content — only shown for active tab */}
+                        {/* Expandable content. Only shown for active tab */}
                         <AnimatePresence mode="wait">
                           {isActive && (
                             <motion.div

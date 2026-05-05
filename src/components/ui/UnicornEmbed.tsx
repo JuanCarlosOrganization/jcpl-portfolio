@@ -8,7 +8,7 @@ interface Props {
 }
 
 /**
- * UnicornEmbed — renders a Unicorn Studio project and injects the
+ * UnicornEmbed. Renders a Unicorn Studio project and injects the
  * SDK script via useEffect so it actually executes in the browser.
  * (React does not run <script> tags placed in JSX.)
  */

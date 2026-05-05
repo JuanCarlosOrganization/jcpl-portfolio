@@ -18,7 +18,7 @@ interface UnicornGlowProps {
 
 /**
  * Wraps children with a Unicorn Studio WebGL glow effect behind them.
- * Uses project KgQLt1oeZGOzxz1T0OLX — a subtle luminous aura.
+ * Uses project KgQLt1oeZGOzxz1T0OLX. a subtle luminous aura.
  * Only renders on client, respects prefers-reduced-motion.
  */
 export default function UnicornGlow({
@@ -41,7 +41,7 @@ export default function UnicornGlow({
 
   return (
     <div className={`relative ${className}`}>
-      {/* Unicorn glow layer — positioned behind content */}
+      {/* Unicorn glow layer. Positioned behind content */}
       {mounted && !reducedMotion && (
         <div
           className="absolute inset-0 z-0 pointer-events-none overflow-visible"
@@ -68,7 +68,7 @@ export default function UnicornGlow({
           />
         </div>
       )}
-      {/* Content layer — above glow */}
+      {/* Content layer. Above glow */}
       <div className="relative z-10">{children}</div>
     </div>
   );

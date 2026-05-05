@@ -252,7 +252,7 @@ export default function DiagnosticFormLinear() {
           margin: "0 auto",
         }}
       >
-        {/* Section preamble — Stripe-style: bold direct, no eyebrow */}
+        {/* Section preamble. Stripe-style: bold direct, no eyebrow */}
         <div
           style={{
             maxWidth: 760,
@@ -949,14 +949,14 @@ function ReviewSummary({ data, locale, isMobile = false }: ReviewSummaryProps) {
           email: "Email",
           business: "Entreprise",
           website: "Site web",
-          empty: "—",
+          empty: ",",
         }
       : {
           name: "Name",
           email: "Email",
           business: "Business",
           website: "Website",
-          empty: "—",
+          empty: ",",
         };
 
   const rows = [
@@ -1011,7 +1011,7 @@ function ReviewSummary({ data, locale, isMobile = false }: ReviewSummaryProps) {
               minWidth: 0,
             }}
           >
-            {row.value || "—"}
+            {row.value || ","}
           </span>
         </div>
       ))}

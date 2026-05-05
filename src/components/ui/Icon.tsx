@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 
 /**
- * Icon — Unified SVG icon system
+ * Icon. Unified SVG icon system
  * Replaces all emoji icons with consistent Lucide-style SVGs.
  * 
  * Usage:

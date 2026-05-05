@@ -23,7 +23,7 @@ export default function TestimonialCard({ quote, name, business, city }: Testimo
         &ldquo;{quote}&rdquo;
       </p>
       <p className="text-[12px] mt-3" style={{ color: "#756D63" }}>
-        — {name}, {business} · {city}
+       . {name}, {business} · {city}
       </p>
     </div>
   );

@@ -73,7 +73,7 @@ function PricingCard({
           {name}
         </h3>
 
-        {/* Price removed — application-based */}
+        {/* Price removed. Application-based */}
 
         {/* Divider */}
         <div className="mb-5" style={{ borderTop: "1px solid #2A2318" }} />

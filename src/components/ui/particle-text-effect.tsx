@@ -256,7 +256,7 @@ export function ParticleTextEffect({ words = DEFAULT_WORDS, onComplete }: Partic
     const canvas = canvasRef.current
     if (!canvas) return
 
-    // Fill the entire viewport — 1:1 pixel mapping, no DPR scaling
+    // Fill the entire viewport. 1:1 pixel mapping, no DPR scaling
     const resize = () => {
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight

@@ -1,7 +1,7 @@
 import gsap from "gsap";
 
 /* ═══════════════════════════════════════════════════
-   CONSTANTS — tweak these to retune the hero feel
+   CONSTANTS. tweak these to retune the hero feel
    ═══════════════════════════════════════════════════ */
 const INTRO_EASE = "power3.out";
 
@@ -80,7 +80,7 @@ export const heroIntroSequence = (
     );
   }
 
-  // CTAs — staggered buttons
+  // CTAs. Staggered buttons
   if (elements.ctas) {
     const buttons = elements.ctas.querySelectorAll("a, button");
     if (buttons.length) {
@@ -98,7 +98,7 @@ export const heroIntroSequence = (
     }
   }
 
-  // Proof line — staggered items
+  // Proof line. Staggered items
   if (elements.proof) {
     const items = elements.proof.querySelectorAll("[data-proof]");
     if (items.length) {
@@ -116,7 +116,7 @@ export const heroIntroSequence = (
     }
   }
 
-  // Authority micro-line — last, subtle
+  // Authority micro-line. Last, subtle
   if (elements.authority) {
     tl.fromTo(
       elements.authority,

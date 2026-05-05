@@ -6,7 +6,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import StarBorder from "@/components/ui/StarBorder";
 
 /**
- * AboutPrinciples — 3 operating principle cards with
+ * AboutPrinciples. 3 operating principle cards with
  * title + description, numbered badge, staggered reveal.
  */
 export default function AboutPrinciples() {

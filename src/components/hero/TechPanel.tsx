@@ -50,16 +50,16 @@ export default function TechPanel({ laserLanded = false }: TechPanelProps) {
       {/* Ambient haze behind panel */}
       <div className="tp-haze" />
 
-      {/* Junction bridge — smooths laser→panel seam */}
+      {/* Junction bridge. Smooths laser→panel seam */}
       {isRevealed && <div className="tp-junction" />}
 
-      {/* The panel rectangle — now wrapped in StarBorder for animated effect */}
+      {/* The panel rectangle. Now wrapped in StarBorder for animated effect */}
       <StarBorder color="#fff" speed="6s" thickness={2}>
         <div className={`tp-panel ${isRevealed ? "tp-panel--landed" : ""}`}>
-          {/* Impact glow — radial bloom at beam strike point */}
+          {/* Impact glow. Radial bloom at beam strike point */}
           <div className={`tp-impact ${isRevealed ? "tp-impact--active" : ""}`} />
 
-          {/* Energy spread — horizontal propagation center→edges */}
+          {/* Energy spread. Horizontal propagation center→edges */}
           {isRevealed && (
             <div className="tp-energy">
               <div className="tp-energy-pulse" />

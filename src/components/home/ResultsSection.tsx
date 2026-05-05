@@ -42,7 +42,7 @@ export default function ResultsSection() {
         ))}
       </div>
 
-      {/* Single CTA — no icon, restrained */}
+      {/* Single CTA. no icon, restrained */}
       <Reveal className="text-center" delay={0.2}>
         <CTAButton href="/results" variant="secondary" size="md" eventName="case_card_click">
           View Case Studies

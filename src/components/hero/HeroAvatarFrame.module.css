@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════
-   HERO AVATAR FRAME — CSS Module
+   HERO AVATAR FRAME. CSS Module
    Premium border stroke + inner glow via pseudo-elements.
    Z-index ordering (all local to the isolation stacking context):
      ::after inner glow  → z-index 2   (below overlays)
@@ -24,9 +24,9 @@
 
 
 /* ══════════════════════════════════════════════════════
-   TOP UI RAIL  — Avatar-faithful
+   TOP UI RAIL . Avatar-faithful
    [HOME][APPLY]  ──── ◆ CLIENT GROWTH ◆ ────  [RESULTS][CONTACT]
-   z-index 11 — topmost within the isolation stacking context.
+   z-index 11. topmost within the isolation stacking context.
    pointer-events: none on rail wrapper (decorative HUD only).
    ══════════════════════════════════════════════════════ */
 .topRail {
@@ -62,7 +62,7 @@
   flex-shrink: 0;
 }
 
-/* Avatar-style pill nav item — rounded rectangle, subtle border + bg */
+/* Avatar-style pill nav item. rounded rectangle, subtle border + bg */
 .railPill {
   display: inline-flex;
   align-items: center;
@@ -89,7 +89,7 @@
   min-width: 0;
 }
 
-/* Expanding gradient line — radiates outward from the wordmark */
+/* Expanding gradient line. radiates outward from the wordmark */
 .railLine {
   flex: 1;
   height: 1px;
@@ -102,7 +102,7 @@
   );
 }
 
-/* Avatar diamond connector — where line meets the wordmark */
+/* Avatar diamond connector. where line meets the wordmark */
 .railConnector {
   flex-shrink: 0;
   width: 5px;
@@ -112,7 +112,7 @@
   background: rgba(43, 90, 140, 0.22);
 }
 
-/* Center wordmark — Avatar-equivalent of "AVATAR" calligraphic title */
+/* Center wordmark. Avatar-equivalent of "AVATAR" calligraphic title */
 .centerLogo {
   flex-shrink: 0;
   padding: 0 10px;
@@ -124,7 +124,7 @@
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   white-space: nowrap;
   user-select: none;
-  /* Restrained sapphire halo — not neon */
+  /* Restrained sapphire halo. not neon */
   text-shadow: 0 0 18px rgba(43, 90, 140, 0.45);
 }
 

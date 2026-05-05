@@ -18,7 +18,7 @@ export type ProofLogoItem = {
   id: string;
   name: string;
   logo: string;        // image URL (PNG, JPG, WebP)
-  accentColor?: string; // hex string — tints the sphere; default dark navy
+  accentColor?: string; // hex string. Tints the sphere; default dark navy
 };
 
 export type ProofOrbitProps = {
@@ -71,7 +71,7 @@ function getCircleMask(): THREE.CanvasTexture {
 
 // ─── Ball Visual ──────────────────────────────────────────────────────────────
 // Renders inside <Suspense>. Suspends (via useLoader) until the logo texture
-// is loaded — all balls appear simultaneously once ready.
+// is loaded. All balls appear simultaneously once ready.
 
 function BallVisual({
   logoUrl,
@@ -98,7 +98,7 @@ function BallVisual({
 
   return (
     <>
-      {/* ── Main Sphere — polished glass clearcoat ── */}
+      {/* ── Main Sphere. Polished glass clearcoat ── */}
       <mesh>
         <sphereGeometry args={[radius, 40, 40]} />
         <meshPhysicalMaterial
@@ -113,7 +113,7 @@ function BallVisual({
         />
       </mesh>
 
-      {/* ── Inner rim — very faint blue backlight ── */}
+      {/* ── Inner rim. Very faint blue backlight ── */}
       <mesh>
         <sphereGeometry args={[radius * 0.984, 24, 24]} />
         <meshBasicMaterial
@@ -124,7 +124,7 @@ function BallVisual({
         />
       </mesh>
 
-      {/* ── Logo plane — billboarded, sits flush on sphere surface ──
+      {/* ── Logo plane. Billboarded, sits flush on sphere surface ──
           Billboard ensures the plane always faces the camera regardless of
           ball position or scene rotation, keeping logos crisp and readable.
           renderOrder={1} + depthWrite={false} guarantees correct layering
@@ -154,7 +154,7 @@ type BallState = {
   color:  THREE.Color;
 };
 
-// ─── Scene — Physics Loop + All Balls ────────────────────────────────────────
+// ─── Scene. Physics Loop + All Balls ────────────────────────────────────────
 
 function Scene({
   logos,
@@ -361,7 +361,7 @@ export default function ProofOrbit({
     setReady(true);
   }, []);
 
-  // SSR / hydration placeholder — prevents layout shift
+  // SSR / hydration placeholder. Prevents layout shift
   if (!ready) {
     return <div style={{ height }} className={className} aria-hidden="true" />;
   }

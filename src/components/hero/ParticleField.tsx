@@ -5,7 +5,7 @@ import "./particle-field.css";
 
 /**
  * Lightweight CSS-only floating particles for depth behind the laser beam.
- * Uses pseudo-random positioning via CSS custom properties — no JS runtime cost.
+ * Uses pseudo-random positioning via CSS custom properties. No JS runtime cost.
  */
 const PARTICLE_COUNT = 24;
 

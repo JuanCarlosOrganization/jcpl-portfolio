@@ -53,7 +53,7 @@ export default function ApplyForm() {
         formData[field.name]?.trim() &&
         !/^https?:\/\/.+\..+/.test(formData[field.name].trim())
       ) {
-        newErrors[field.name] = "Please enter a valid URL (e.g. https://example.com)";
+        newErrors[field.name] = "Please enter a valid URL (e.g. Https://example.com)";
       }
     }
     setErrors(newErrors);

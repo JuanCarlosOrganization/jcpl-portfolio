@@ -11,7 +11,7 @@ const philosophyBullets = [
 ];
 
 /**
- * PhilosophyBlock — compact editorial manifesto with signature.
+ * PhilosophyBlock. Compact editorial manifesto with signature.
  * Reduced dead space, micro-proof bullets, clean centered layout.
  */
 export default function PhilosophyBlock() {

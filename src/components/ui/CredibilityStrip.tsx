@@ -15,7 +15,7 @@ interface Props {
 }
 
 /**
- * CredibilityStrip — animated metrics-based trust strip.
+ * CredibilityStrip. Animated metrics-based trust strip.
  * Uses StarBorder for premium containers + CountUpValue for numeric metrics.
  */
 export default function CredibilityStrip({ metrics }: Props) {

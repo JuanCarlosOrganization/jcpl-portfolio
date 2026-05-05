@@ -6,7 +6,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import StarBorder from "@/components/ui/StarBorder";
 
 /**
- * AboutPhilosophy — single centered statement card
+ * AboutPhilosophy. Single centered statement card
  * with StarBorder accent glow and subtle reveal.
  */
 export default function AboutPhilosophy() {

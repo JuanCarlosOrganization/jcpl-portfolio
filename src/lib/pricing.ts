@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════
-   PRICING — Centralized Data Config
+   PRICING. Centralized Data Config
    All pricing data, comparison, add-ons, FAQs.
    ═══════════════════════════════════════════════════ */
 

@@ -19,7 +19,7 @@ export default function AboutPage() {
       {/* Spacer for fixed nav */}
       <div className="pt-24 md:pt-28" />
 
-      {/* Who I Am — moved from homepage */}
+      {/* Who I Am. Moved from homepage */}
       <AboutSection />
 
       {/* How I operate */}

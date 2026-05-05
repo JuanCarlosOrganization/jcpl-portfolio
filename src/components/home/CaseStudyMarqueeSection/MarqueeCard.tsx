@@ -21,7 +21,7 @@ export default function MarqueeCard({ card, ariaHidden }: Props) {
       <div className="csm-card__media">
         <Image
           src={card.image}
-          alt={`${card.name} — ${card.company}`}
+          alt={`${card.name}. ${card.company}`}
           fill
           sizes="(max-width: 640px) 280px, (max-width: 1024px) 32vw, 340px"
           className="csm-card__img"

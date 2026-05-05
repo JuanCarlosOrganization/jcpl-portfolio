@@ -6,7 +6,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import StarBorder from "@/components/ui/StarBorder";
 
 /**
- * AboutIntegrated — "Why Integrated Systems Beat Fragmented Freelancers"
+ * AboutIntegrated. "Why Integrated Systems Beat Fragmented Freelancers"
  * 3 stacked cards with alternating accent highlight, subtle reveal.
  */
 export default function AboutIntegrated() {

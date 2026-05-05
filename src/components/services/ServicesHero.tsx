@@ -22,7 +22,7 @@ export default function ServicesHero() {
     >
       <div className="w-full px-5 sm:px-6">
         <div className="max-w-[1200px] mx-auto pt-32 pb-16 md:pb-14 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left column — text */}
+          {/* Left column. Text */}
           <div>
             <p
               style={{
@@ -142,7 +142,7 @@ export default function ServicesHero() {
             </div>
           </div>
 
-          {/* Right column — live proof visual */}
+          {/* Right column. Live proof visual */}
           <div className="relative hidden lg:block">
             <div
               style={{

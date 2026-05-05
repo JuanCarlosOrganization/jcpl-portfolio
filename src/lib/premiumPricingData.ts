@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════
-   Premium Pricing Section — Tier & Comparison Data
+   Premium Pricing Section. Tier & Comparison Data
    ═══════════════════════════════════════════════════ */
 
 export interface ProofBlock {

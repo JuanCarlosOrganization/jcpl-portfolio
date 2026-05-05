@@ -95,7 +95,7 @@ function StaticHero() {
 }
 
 /* ══════════════════════════════════════════════════════════
-   LAYER 2 — Hook Statement
+   LAYER 2. Hook Statement
    ══════════════════════════════════════════════════════════ */
 
 function HookLayer() {
@@ -121,7 +121,7 @@ function HookLayer() {
 }
 
 /* ══════════════════════════════════════════════════════════
-   LAYER 3 — Services Universe
+   LAYER 3. Services Universe
    ══════════════════════════════════════════════════════════ */
 
 function ProofLine() {
@@ -201,7 +201,7 @@ function ConfidenceRail() {
 }
 
 /* ══════════════════════════════════════════════════════════
-   INTRO ANIMATION — FIXED
+   INTRO ANIMATION. FIXED
    ══════════════════════════════════════════════════════════ */
 const INTRO_ANIMATION = {
   opacity: 0,
@@ -347,7 +347,7 @@ export default function CinematicHero() {
           </div>
           <div className="hero-overlay bg-[linear-gradient(180deg,rgba(6,10,8,0.28)_0%,rgba(6,10,8,0.42)_52%,rgba(6,10,8,0.58)_100%)]" />
 
-          {/* Persistent logo — starts centered, scrolls to top-left */}
+          {/* Persistent logo. Starts centered, scrolls to top-left */}
           <LogoIntro ref={logoRef} />
 
           {/* Scroll indicator */}

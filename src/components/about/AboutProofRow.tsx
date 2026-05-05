@@ -6,7 +6,7 @@ import StarBorder from "@/components/ui/StarBorder";
 import { CountUpValue } from "@/components/motion";
 
 /**
- * AboutProofRow — compact 3-stat credibility row.
+ * AboutProofRow. Compact 3-stat credibility row.
  * Uses StarBorder containers + CountUpValue for numeric stats.
  */
 export default function AboutProofRow() {

@@ -174,7 +174,7 @@ function CaseStudyCardGrid() {
   );
 }
 
-/* ── Culture Barbershop — Layout C: compact full-width card ── */
+/* ── Culture Barbershop. Layout C: compact full-width card ── */
 function CultureCaseStudy() {
   return (
     <section
@@ -237,7 +237,7 @@ function CultureCaseStudy() {
                   "Performance tracking",
                 ].map((d) => (
                   <span key={d} className="text-[13px] text-[rgba(255,255,255,0.55)] flex items-center gap-2">
-                    <span className="text-[#D4A853]">—</span> {d}
+                    <span className="text-[#D4A853]">,</span> {d}
                   </span>
                 ))}
               </div>
@@ -290,12 +290,12 @@ export default function CaseStudiesSection() {
       {/* Section 2: Summary card grid with anchor links */}
       <CaseStudyCardGrid />
 
-      {/* Section 3: Triple W — Layout A (narrative left, stats right) */}
+      {/* Section 3: Triple W. Layout A (narrative left, stats right) */}
       <div id="triple-w">
         {flagship && <ResultsFlagshipCaseStudy cs={flagship} />}
       </div>
 
-      {/* Mid-page CTA — one only, after Triple W */}
+      {/* Mid-page CTA. one only, after Triple W */}
       <section className="py-6" style={{ background: "#0D0B09" }}>
         <div className="max-w-[1120px] mx-auto px-6">
           <div
@@ -329,12 +329,12 @@ export default function CaseStudiesSection() {
         </div>
       </section>
 
-      {/* Section 5: Elite — Layout B (full-width headline, no calendar) */}
+      {/* Section 5: Elite. Layout B (full-width headline, no calendar) */}
       <div id="elite">
         {secondary && <ResultsSecondaryCase cs={secondary} />}
       </div>
 
-      {/* Section 6: Culture — Layout C (compact card) */}
+      {/* Section 6: Culture. Layout C (compact card) */}
       <CultureCaseStudy />
 
       {/* Section 7: In The Field */}

@@ -26,7 +26,7 @@ export default function HeroSection() {
       }}
       aria-label="Hero"
     >
-      {/* Layer 0: Alcove Hero background — covers full viewport */}
+      {/* Layer 0: Alcove Hero background. Covers full viewport */}
       <div
         aria-hidden="true"
         className="hero-animation globe-container"
@@ -46,7 +46,7 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* Layer 1: Dark overlay — protects text zone */}
+      {/* Layer 1: Dark overlay. Protects text zone */}
       <div
         aria-hidden="true"
         className="hero-overlay"
@@ -109,7 +109,7 @@ export default function HeroSection() {
           ))}
         </h1>
 
-        {/* Subheadline — Fix 3 */}
+        {/* Subheadline. Fix 3 */}
         <p
           className="hero-enter hero-subhead"
           style={{
@@ -162,7 +162,7 @@ export default function HeroSection() {
           animation: hero-fadeup 0.6s ease 0.2s forwards;
         }
 
-        /* Scene container — allow the scene to fill its bounds */
+        /* Scene container. Allow the scene to fill its bounds */
         .globe-container > div,
         .globe-container iframe,
         .globe-container canvas {
@@ -172,7 +172,7 @@ export default function HeroSection() {
           height: 100% !important;
         }
 
-        /* ── Primary CTA — gold with white shimmer sweep ── */
+        /* ── Primary CTA. gold with white shimmer sweep ── */
         .primary-cta {
           background: #D4A853;
           color: #0D0B09;
@@ -221,7 +221,7 @@ export default function HeroSection() {
           100% { left: 125%; }
         }
 
-        /* ── Secondary CTA — text link ── */
+        /* ── Secondary CTA. text link ── */
         .hero-text-link {
           font-family: var(--font-dm-sans), 'DM Sans', sans-serif;
           font-size: 14px;
@@ -243,7 +243,7 @@ export default function HeroSection() {
         /* ── Mobile: max-width 768px ── */
         @media (max-width: 768px) {
 
-          /* Overlay — dark at top for text, clear below for wisps */
+          /* Overlay. Dark at top for text, clear below for wisps */
           .hero-overlay {
             background: linear-gradient(
               to bottom,
@@ -253,7 +253,7 @@ export default function HeroSection() {
             ) !important;
           }
 
-          /* Section — flush, full viewport */
+          /* Section. Flush, full viewport */
           .hero-section {
             height: 100dvh !important;
             min-height: 100dvh !important;
@@ -300,7 +300,7 @@ export default function HeroSection() {
             margin-bottom: 24px !important;
           }
 
-          /* CTA row — stack vertically on mobile */
+          /* CTA row. Stack vertically on mobile */
           .hero-cta-row {
             flex-direction: column !important;
             align-items: center !important;

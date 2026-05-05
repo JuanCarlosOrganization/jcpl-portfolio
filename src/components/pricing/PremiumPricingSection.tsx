@@ -181,7 +181,7 @@ export default function PremiumPricingSection({
       style={{ background: "#131009" }}
       aria-labelledby="pricing-heading"
     >
-      {/* Pricing orb — behind middle card */}
+      {/* Pricing orb. Behind middle card */}
       <div
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] rounded-full pointer-events-none z-0 max-md:w-[270px] max-md:h-[270px]"
         style={{

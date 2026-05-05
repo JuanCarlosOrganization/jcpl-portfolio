@@ -105,7 +105,7 @@ export default function SiteNav() {
         <Link
           href="/"
           className="brand-lockup-link flex items-center justify-center"
-          aria-label="Client Growth — home"
+          aria-label="Client Growth. Home"
           style={{ borderRight: `1px solid ${GOLD_BORDER}` }}
         >
           <span className="brand-lockup" style={{ display: "inline-flex", alignItems: "center", gap: 14 }}>

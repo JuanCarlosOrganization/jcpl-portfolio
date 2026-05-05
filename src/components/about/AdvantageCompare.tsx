@@ -22,7 +22,7 @@ const integrated = [
 
 
 /**
- * AdvantageCompare — 2-column comparison: Fragmented vs Integrated.
+ * AdvantageCompare. 2-column comparison: Fragmented vs Integrated.
  * Distinct column headers, readable bullet text, improved result line.
  */
 export default function AdvantageCompare() {
@@ -105,7 +105,7 @@ export default function AdvantageCompare() {
         </p>
       </AnimatedSection>
 
-      {/* Result sentence — elevated */}
+      {/* Result sentence. Elevated */}
       <AnimatedSection delay={0.25} className="mt-4 text-center">
         <p className="text-base md:text-lg text-[var(--text-secondary)]">
           <span className="text-white font-semibold">The result:</span>{" "}

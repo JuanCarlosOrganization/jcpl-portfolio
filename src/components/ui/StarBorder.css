@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════
-   STAR BORDER — Animated Border Wrapper
+   STAR BORDER. Animated Border Wrapper
    Premium travelling-light effect for containers,
    cards, CTAs, and impact panels.
    ═══════════════════════════════════════════════════ */
@@ -130,17 +130,17 @@
    VARIANTS
    ═══════════════════════════════════════════════════ */
 
-/* Accent (default) — violet brand */
+/* Accent (default). violet brand */
 .star-border--accent {
   --sb-color: var(--brand-accent);
 }
 
-/* Alt — electric blue */
+/* Alt. electric blue */
 .star-border--alt {
   --sb-color: var(--brand-alt);
 }
 
-/* Subtle — very faint, for cards */
+/* Subtle. very faint, for cards */
 .star-border--subtle .star-border__ray {
   opacity: 0;
   animation-name: sb-travel-x;
@@ -150,7 +150,7 @@
   animation-name: sb-travel-y;
 }
 
-/* Impact — for beam-hit panel, brighter + faster */
+/* Impact. for beam-hit panel, brighter + faster */
 .star-border--impact {
   --sb-color: var(--brand-alt);
   --sb-speed: 3s;
@@ -170,7 +170,7 @@
 }
 
 /* ═══════════════════════════════════════════════════
-   REDUCED MOTION — Disable all animation
+   REDUCED MOTION. Disable all animation
    ═══════════════════════════════════════════════════ */
 
 @media (prefers-reduced-motion: reduce) {

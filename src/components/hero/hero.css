@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════
-   COMMAND BRIDGE HERO — Full-bleed WebGL + Content
+   COMMAND BRIDGE HERO. Full-bleed WebGL + Content
    No outer frame. Section fills viewport.
    3-Layer: WebGL → Readability overlay → Content
    ═══════════════════════════════════════════════════ */
@@ -55,7 +55,7 @@
 }
 
 /* ═══════════════════════════════════════════════════
-   HERO FRAME — full-bleed transparent container
+   HERO FRAME. full-bleed transparent container
    No border. No shadow. No radius.
    Just provides stacking context for the 3 layers.
    ═══════════════════════════════════════════════════ */
@@ -79,7 +79,7 @@
   pointer-events: none;
 }
 
-/* ═══ LAYER 1 — WebGL BG ═══ */
+/* ═══ LAYER 1. WebGL BG ═══ */
 .cb-layer--bg {
   inset: -12px;
   z-index: 0;
@@ -103,9 +103,9 @@
   height: 100% !important;
 }
 
-/* ═══ LAYER 2 — Readability overlays ═══ */
+/* ═══ LAYER 2. Readability overlays ═══ */
 
-/* Top-heavy gradient — darkens upper 60% for H1 legibility (warm charcoal) */
+/* Top-heavy gradient. darkens upper 60% for H1 legibility (warm charcoal) */
 .cb-overlay-top {
   z-index: 3;
   background: linear-gradient(to bottom,
@@ -134,7 +134,7 @@
 }
 
 /* ═══════════════════════════════════════════════════
-   LAYER 3 — Content
+   LAYER 3. Content
    ═══════════════════════════════════════════════════ */
 .cb-content-wrap {
   position: relative;
@@ -221,7 +221,7 @@
     transform 0.2s ease;
 }
 
-/* Base primary CTA — animation/glow from .cta-primary in globals */
+/* Base primary CTA. animation/glow from .cta-primary in globals */
 .cb-cta--primary {
   background: #D4A853;
   color: #0A0E1A;
@@ -240,7 +240,7 @@
 }
 
 /* ═══════════════════════════════════════════════════
-   CURVED LOOP — decorative ambient text arch
+   CURVED LOOP. decorative ambient text arch
    ═══════════════════════════════════════════════════ */
 .cb-curved-loop {
   position: absolute;
@@ -309,7 +309,7 @@
 }
 
 /* ═══════════════════════════════════════════════════
-   WEBGL FALLBACK — always-visible gradient behind the
+   WEBGL FALLBACK. always-visible gradient behind the
    canvas so the hero has depth even if WebGL fails,
    is blocked, or hasn't loaded yet.
    ═══════════════════════════════════════════════════ */

@@ -6,7 +6,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 import SectionLabel from "@/components/ui/SectionLabel";
 
 /**
- * CaseStudyPreview — Single case study card (RV Rentals only).
+ * CaseStudyPreview. Single case study card (RV Rentals only).
  * Full-width centered card.
  * Placed between MetricsRow and Principles on the About page.
  */

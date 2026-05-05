@@ -71,8 +71,8 @@ interface TrackOptions {
  * Fire a custom analytics event.
  *
  * Dispatches to all active analytics destinations:
- * - GA4  → window.gtag('event', ...) — direct GA4 custom event
- * - Clarity → window.clarity('event', ...) — session tag for heatmap filtering
+ * - GA4  → window.gtag('event', ...). direct GA4 custom event
+ * - Clarity → window.clarity('event', ...). session tag for heatmap filtering
  * - dataLayer → GTM-compatible push (for future GTM use)
  *
  * Each destination is called only when its global is available, so
@@ -90,12 +90,12 @@ export function trackEvent(name: EventName, options?: TrackOptions) {
 
   const w = window as AnalyticsWindow;
 
-  // GA4 direct event (this is the correct call — gtag('event', ...) not dataLayer.push)
+  // GA4 direct event (this is the correct call. Gtag('event', ...) not dataLayer.push)
   if (typeof w.gtag === "function") {
     w.gtag("event", name, props ?? {});
   }
 
-  // Microsoft Clarity custom event — enables session filtering by event name
+  // Microsoft Clarity custom event. Enables session filtering by event name
   if (typeof w.clarity === "function") {
     w.clarity("event", name);
   }

@@ -50,8 +50,8 @@ export default function PremiumNav() {
             padding: "20px 48px",
           }}
         >
-          {/* Logo — left */}
-          <Link href="/" aria-label="Client Growth — Home" className="flex-shrink-0">
+          {/* Logo. Left */}
+          <Link href="/" aria-label="Client Growth. Home" className="flex-shrink-0">
             <motion.span
               initial={{ opacity: 0, x: -12 }}
               animate={{ opacity: 1, x: 0 }}
@@ -69,7 +69,7 @@ export default function PremiumNav() {
             </motion.span>
           </Link>
 
-          {/* Desktop links — right */}
+          {/* Desktop links. Right */}
           <div className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link, i) =>
               link.isCta ? (

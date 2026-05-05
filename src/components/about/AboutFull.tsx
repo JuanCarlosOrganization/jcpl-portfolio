@@ -21,7 +21,7 @@ export default function AboutFull() {
           alignItems: "center",
         }}
       >
-        {/* Left — Unicorn Studio portrait */}
+        {/* Left. Unicorn Studio portrait */}
         <div
           className="aboutfull-animation"
           style={{
@@ -42,7 +42,7 @@ export default function AboutFull() {
           />
         </div>
 
-        {/* Right — Full text */}
+        {/* Right. Full text */}
         <div>
           <p
             style={{

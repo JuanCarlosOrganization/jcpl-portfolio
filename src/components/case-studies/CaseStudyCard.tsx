@@ -62,7 +62,7 @@ export default function CaseStudyCard({ cs }: { cs: CaseStudy }) {
           {cs.outcome}
         </div>
 
-        {/* Result tag — brand colors */}
+        {/* Result tag. Brand colors */}
         {cs.resultTag && (
           <div className="mb-4 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[rgba(212,168,83,0.07)] border border-[rgba(212,168,83,0.18)] w-fit">
             <div className="w-1.5 h-1.5 rounded-full bg-[#D4A853]/70" />
@@ -70,7 +70,7 @@ export default function CaseStudyCard({ cs }: { cs: CaseStudy }) {
           </div>
         )}
 
-        {/* Live status badge — active builds */}
+        {/* Live status badge. Active builds */}
         {cs.inProgress && (
           <div className="mb-4">
             <span className="inline-flex items-center gap-2 bg-[rgba(212,168,83,0.08)] border border-[rgba(212,168,83,0.2)] rounded-full px-[14px] py-[5px]">
@@ -101,7 +101,7 @@ export default function CaseStudyCard({ cs }: { cs: CaseStudy }) {
           </div>
         )}
 
-        {/* CTA row — clean hierarchy, no button stacking */}
+        {/* CTA row. Clean hierarchy, no button stacking */}
         <div
           className="flex items-center gap-4 pt-4 mt-auto"
           style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}

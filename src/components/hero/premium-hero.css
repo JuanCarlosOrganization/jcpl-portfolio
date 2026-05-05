@@ -9,7 +9,7 @@
   50% { box-shadow: 0 0 0 6px var(--brand-accent), 0 0 48px 12px var(--brand-accent), 0 2px 32px rgba(51,204,255,0.28); }
 }
 /* ═══════════════════════════════════════════════════
-   PREMIUM HERO — Cinematic Laser-Dominant Design
+   PREMIUM HERO. Cinematic Laser-Dominant Design
    
    Palette:
      Ink navy   #0a1020
@@ -21,7 +21,7 @@
      1  ph-aurora       Aurora WebGL (subtle, moody blue)
      2  ph-vignette     Cinematic radial vignette
    2.5  ph-particles    Floating dust motes
-     3  ph-laser        LASER FLOW — dominant focal point
+     3  ph-laser        LASER FLOW. dominant focal point
      4  ph-bloom        CSS glow bloom around beam
      5  ph-grain        Film grain texture
      6  ph-bottom-fade  Bottom edge-out gradient
@@ -95,7 +95,7 @@
   top: 0;
   left: 0;
   right: 0;
-  /* Extend past hero bottom — uses single source variable */
+  /* Extend past hero bottom. uses single source variable */
   bottom: calc(-1 * var(--laser-extend, 40vh));
   z-index: 3;
   mix-blend-mode: screen;
@@ -178,7 +178,7 @@
 }
 
 /* ═══════════════════════════════════════════════════
-   COPY — hard-left on desktop to leave space for laser,
+   COPY. hard-left on desktop to leave space for laser,
    centered on mobile
    ═══════════════════════════════════════════════════ */
 .ph-copy {

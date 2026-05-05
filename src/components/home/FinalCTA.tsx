@@ -8,7 +8,7 @@ import { Reveal } from "@/components/motion";
 export default function FinalCTA() {
   return (
     <section id="cta" className="relative overflow-hidden">
-      {/* Background treatment — distinct from other sections */}
+      {/* Background treatment. Distinct from other sections */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{

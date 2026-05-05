@@ -5,7 +5,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 import SectionLabel from "@/components/ui/SectionLabel";
 
 /**
- * WorkTimeline — vertical timeline with pill duration badges,
+ * WorkTimeline. Vertical timeline with pill duration badges,
  * precise connector line + nodes, staggered viewport reveals.
  * Tighter spacing, consistent pill style.
  */
@@ -30,7 +30,7 @@ export default function WorkTimeline() {
           {aboutTimeline.map((step, i) => (
             <AnimatedSection key={step.title} delay={0.12 * i} direction="left">
               <div className="relative flex gap-5 md:gap-6">
-                {/* Node — consistent 38×38 */}
+                {/* Node. Consistent 38×38 */}
                 <div className="relative shrink-0 flex flex-col items-center" aria-hidden="true">
                   <span
                     className="h-[38px] w-[38px] flex items-center justify-center rounded-full border-[1.5px] border-sv-primary bg-[var(--bg-base)] text-[10px] font-bold text-sv-primary tabular-nums shadow-[0_0_12px_rgba(37,99,235,0.20)] z-10"

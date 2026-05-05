@@ -6,7 +6,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import StarBorder from "@/components/ui/StarBorder";
 
 /**
- * AboutTimeline — vertical timeline (Week 1 / Weeks 2–4 / Ongoing)
+ * AboutTimeline. Vertical timeline (Week 1 / Weeks 2–4 / Ongoing)
  * with dot connector, staggered reveals, and StarBorder containers.
  */
 export default function AboutTimeline() {

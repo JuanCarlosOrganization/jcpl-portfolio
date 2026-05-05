@@ -68,7 +68,7 @@ export default function ROICalculator() {
       className="relative px-6 md:px-12 lg:px-20 py-24 md:py-28"
       style={{ background: "#0D0B09", borderBottom: "1px solid #2A2318" }}
     >
-      {/* Mobile accordion trigger — visible only below 768px */}
+      {/* Mobile accordion trigger. Visible only below 768px */}
       {isMobile && !mobileOpen && (
         <button
           type="button"
@@ -95,7 +95,7 @@ export default function ROICalculator() {
         </button>
       )}
 
-      {/* Content — always visible on desktop, toggled on mobile */}
+      {/* Content. Always visible on desktop, toggled on mobile */}
       <div
         id="roi-content"
         style={{ display: isMobile && !mobileOpen ? "none" : undefined }}
@@ -141,7 +141,7 @@ export default function ROICalculator() {
           {/* ── Inputs ── */}
           <div className="space-y-12">
 
-            {/* Slider 1 — Job Value */}
+            {/* Slider 1. Job Value */}
             <div>
               <div className="flex justify-between items-baseline mb-4">
                 <label
@@ -177,7 +177,7 @@ export default function ROICalculator() {
               </div>
             </div>
 
-            {/* Slider 2 — Calls per month */}
+            {/* Slider 2. Calls per month */}
             <div>
               <div className="flex justify-between items-baseline mb-4">
                 <label
@@ -311,7 +311,7 @@ export default function ROICalculator() {
               {c.disclaimer}
             </p>
 
-            {/* Text link — CTA consolidated to diagnostic form */}
+            {/* Text link. CTA consolidated to diagnostic form */}
             <div
               style={{
                 borderTop: "1px solid rgba(212,168,83,0.18)",

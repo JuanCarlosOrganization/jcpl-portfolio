@@ -28,7 +28,7 @@ export default function SceneText({ scene, progress }: Props) {
   // Blur is driven by opacity itself: blurred when invisible, sharp when visible.
   const filter = useTransform(opacity, (o) => `blur(${(1 - o) * 8}px)`);
 
-  // Hide entirely when effectively invisible — keeps inactive headlines out
+  // Hide entirely when effectively invisible. Keeps inactive headlines out
   // of the accessibility tree and prevents any sub-pixel ghost paints.
   const visibility = useTransform(opacity, (o) => (o < 0.01 ? "hidden" : "visible"));
 

@@ -56,7 +56,7 @@ const pillars: Pillar[] = [
     id: "seo",
     index: "01",
     headline: "Show up first.",
-    body: "I position you on Google and AI tools like ChatGPT at the exact moment buyers in your city are ready to call — before your competitors know this exists.",
+    body: "I position you on Google and AI tools like ChatGPT at the exact moment buyers in your city are ready to call. Before your competitors know this exists.",
     tags: ["Local SEO", "GEO content", "AI search"],
     screenshot: "/images/showcase-seo.webp",
     accent: "rgba(212, 168, 83, 0.16)",
@@ -74,7 +74,7 @@ const pillars: Pillar[] = [
     id: "ads",
     index: "03",
     headline: "Get in front of buyers now.",
-    body: "Google Ads targeting people with purchase intent — not browsers. Every campaign built around one goal: more calls from people ready to hire you today.",
+    body: "Google Ads targeting people with purchase intent. Not browsers. Every campaign built around one goal: more calls from people ready to hire you today.",
     tags: ["Paid traffic", "Landing pages", "Cost per call"],
     screenshot: "/images/showcase-ads.webp",
     accent: "rgba(196, 154, 42, 0.18)",
@@ -83,7 +83,7 @@ const pillars: Pillar[] = [
     id: "compound",
     index: "04",
     headline: "Results compound every week.",
-    body: "I look at the numbers every week and cut what isn't working. The system compounds — your cost per lead drops every month it runs.",
+    body: "I look at the numbers every week and cut what isn't working. The system compounds. Your cost per lead drops every month it runs.",
     tags: ["Weekly optimization", "Monthly review", "Conversion lift"],
     screenshot: "/images/showcase-copy.webp",
     accent: "rgba(212, 168, 83, 0.20)",
@@ -106,7 +106,7 @@ export default function SystemPerspectiveCarousel() {
   return (
     <section
       ref={containerRef}
-      aria-label="The system — four pillars"
+      aria-label="The system. Four pillars"
       style={{
         position: "relative",
         background:
@@ -366,7 +366,7 @@ function PillarCard({
           gap: 0,
         }}
       >
-        {/* Visual block — first on mobile, right on desktop */}
+        {/* Visual block. First on mobile, right on desktop */}
         <div
           style={{
             order: isMobile ? 0 : 1,
@@ -422,7 +422,7 @@ function PillarCard({
           </div>
         </div>
 
-        {/* Copy block — second on mobile, left on desktop */}
+        {/* Copy block. Second on mobile, left on desktop */}
         <div
           style={{
             order: isMobile ? 1 : 0,

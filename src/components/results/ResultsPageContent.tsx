@@ -66,7 +66,7 @@ export default function ResultsPageContent() {
         </p>
       </section>
 
-      {/* Lead Result — Triple W */}
+      {/* Lead Result. Triple W */}
       <section className="pb-16 px-6">
         <div className="mx-auto" style={{ maxWidth: 900, background: "#141210", border: "1px solid rgba(212,168,83,0.15)", borderRadius: 16, padding: "48px 40px" }}>
           <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(240,234,214,0.4)" }}>

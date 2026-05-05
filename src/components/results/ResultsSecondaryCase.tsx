@@ -92,7 +92,7 @@ export default function ResultsSecondaryCase({ cs }: { cs: CaseStudy }) {
                     className="flex items-start gap-3 text-[14px] text-[rgba(255,255,255,0.6)] leading-[1.5]"
                   >
                     <span className="text-[#D4A853] mt-[1px] flex-shrink-0 select-none">
-                      —
+                     .
                     </span>
                     {d}
                   </li>
@@ -158,7 +158,7 @@ export default function ResultsSecondaryCase({ cs }: { cs: CaseStudy }) {
               </span>
             </div>
 
-            {/* Primary metric — SEO target */}
+            {/* Primary metric. SEO target */}
             <div
               className="pb-5 mb-5 border-b"
               style={{ borderColor: "rgba(255,255,255,0.06)" }}

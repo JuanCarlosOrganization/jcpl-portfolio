@@ -30,7 +30,7 @@ export default function AboutSection() {
           alignItems: "center",
         }}
       >
-        {/* Left column — Unicorn Studio animation */}
+        {/* Left column. Unicorn Studio animation */}
         <div
           className="about-animation"
           style={{
@@ -51,7 +51,7 @@ export default function AboutSection() {
           />
         </div>
 
-        {/* Right column — text content */}
+        {/* Right column. Text content */}
         <div>
           <p
             style={{

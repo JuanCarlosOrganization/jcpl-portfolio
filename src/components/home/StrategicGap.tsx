@@ -35,7 +35,7 @@ export default function StrategicGap() {
           </div>
         </Reveal>
 
-        {/* Bottom row — two half-width cards */}
+        {/* Bottom row. Two half-width cards */}
         <div className="flex flex-col sm:flex-row gap-5">
           {truths.slice(1).map((truth, i) => (
             <Reveal key={i} delay={0.1 * (i + 1)}>

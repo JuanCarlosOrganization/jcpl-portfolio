@@ -76,7 +76,7 @@
   transform: translateY(-2px);
 }
 
-/* Card inner content — above spotlight layer */
+/* Card inner content. above spotlight layer */
 .card-spotlight > * {
   position: relative;
   z-index: 2;

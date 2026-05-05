@@ -91,7 +91,7 @@ export default function ResultsFlagshipCaseStudy({ cs }: { cs: CaseStudy }) {
               </span>
             </div>
 
-            {/* CTA links — clear hierarchy */}
+            {/* CTA links. Clear hierarchy */}
             <div className="flex flex-wrap gap-3">
               <Link
                 href={`/results/${cs.caseStudySlug}`}
@@ -123,7 +123,7 @@ export default function ResultsFlagshipCaseStudy({ cs }: { cs: CaseStudy }) {
                 background: "#0D0B09",
               }}
             >
-              {/* Metric panel — primary dominant */}
+              {/* Metric panel. Primary dominant */}
               <div
                 className="border-b p-6"
                 style={{ borderColor: "rgba(212,168,83,0.1)" }}
@@ -158,7 +158,7 @@ export default function ResultsFlagshipCaseStudy({ cs }: { cs: CaseStudy }) {
                 </div>
               </div>
 
-              {/* Verification context — authored evidence, not a browser mock */}
+              {/* Verification context. Authored evidence, not a browser mock */}
               <div className="p-6 pt-5">
                 <p className="text-[10px] uppercase tracking-[0.12em] text-[rgba(255,255,255,0.25)] mb-4">
                   {rf.verificationContext}

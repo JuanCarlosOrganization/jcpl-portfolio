@@ -3,7 +3,7 @@
 import { useEffect, useRef, type ReactNode } from "react";
 
 /**
- * ElectricBorderFrame — renders children with a UnicornStudio
+ * ElectricBorderFrame. Renders children with a UnicornStudio
  * electric border effect as an absolute overlay.
  * pointer-events-none so it never blocks interaction.
  * Re-inits UnicornStudio after a delay to pick up all data-us-project nodes.
@@ -46,7 +46,7 @@ export default function ElectricBorderFrame({
 
   return (
     <div className={`relative rounded-2xl overflow-hidden ${className}`}>
-      {/* Children (portrait animation) — fills container */}
+      {/* Children (portrait animation). fills container */}
       <div className="relative z-10 w-full h-full">{children}</div>
 
       {/* Electric border overlay */}

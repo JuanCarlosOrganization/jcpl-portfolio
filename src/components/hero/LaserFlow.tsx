@@ -478,11 +478,11 @@ export const LaserFlow = ({
         }
       }
 
-      /* ── Post-intro shaft pulse — subtle brightness wave on 4s cycle
+      /* ── Post-intro shaft pulse. Subtle brightness wave on 4s cycle
            synced with platform energy spread animation ── */
       if (introCompleteRef.current) {
         const PULSE_PERIOD = 4.0;
-        const PULSE_DEPTH = 0.06; /* 6% brightness swing — restrained */
+        const PULSE_DEPTH = 0.06; /* 6% brightness swing. Restrained */
         const phase = (t % PULSE_PERIOD) / PULSE_PERIOD;
         /* Ease-in-out sine for organic feel */
         const pulse = Math.sin(phase * Math.PI * 2) * 0.5 + 0.5;

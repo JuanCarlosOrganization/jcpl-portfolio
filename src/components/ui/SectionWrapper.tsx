@@ -14,7 +14,7 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
 }
 
 /**
- * SectionWrapper — unified section container with consistent
+ * SectionWrapper. Unified section container with consistent
  * vertical rhythm, scroll-margin, and container width.
  */
 const SectionWrapper = forwardRef<HTMLElement, Props>(

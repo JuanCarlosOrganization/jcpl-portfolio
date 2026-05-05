@@ -4,7 +4,7 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import SectionLabel from "@/components/ui/SectionLabel";
 import { Reveal, CountUpValue } from "@/components/motion";
 
-/* ─── Diagnostic Cards — direct, outcome-driven, verifiable ─── */
+/* ─── Diagnostic Cards. Direct, outcome-driven, verifiable ─── */
 const DIAGNOSTICS = [
   {
     icon: (
@@ -62,7 +62,7 @@ export default function ProblemSection() {
           </span>
         </h2>
         <p className="mt-5 text-[var(--text-secondary)] max-w-lg mx-auto leading-relaxed text-[0.95rem]">
-          Most service businesses don&apos;t have a lead generation problem —
+          Most service businesses don&apos;t have a lead generation problem.
           they have a trust, visibility, and conversion problem.
         </p>
       </Reveal>

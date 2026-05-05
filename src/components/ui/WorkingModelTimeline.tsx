@@ -16,7 +16,7 @@ interface Props {
 }
 
 /**
- * WorkingModelTimeline — vertical timeline showing working model phases.
+ * WorkingModelTimeline. Vertical timeline showing working model phases.
  * Each step uses a StarBorder container with staggered animation.
  */
 export default function WorkingModelTimeline({ timeline }: Props) {

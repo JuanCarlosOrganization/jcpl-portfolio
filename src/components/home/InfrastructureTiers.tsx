@@ -43,7 +43,7 @@ export default function InfrastructureTiers() {
         className="w-full py-24 px-4"
         style={{ background: "linear-gradient(180deg, #070B14 0%, #0A0F1E 100%)" }}
       >
-        {/* Section Header — no "THE INFRASTRUCTURE STACK" label */}
+        {/* Section Header. No "THE INFRASTRUCTURE STACK" label */}
         <div className="max-w-4xl mx-auto text-center mb-10">
           <h2
             className="text-4xl md:text-5xl font-semibold tracking-tight mb-4"
@@ -180,7 +180,7 @@ export default function InfrastructureTiers() {
             </div>
           </div>
 
-          {/* CARD 2: Performance Engine — MOST SELECTED */}
+          {/* CARD 2: Performance Engine. MOST SELECTED */}
           <div
             className="order-first md:order-none relative flex flex-col rounded-2xl p-8 h-full transition-all duration-200 hover:-translate-y-[2px] md:-mt-4 md:-mb-4"
             style={{

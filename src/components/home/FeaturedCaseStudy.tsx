@@ -131,7 +131,7 @@ export default function FeaturedCaseStudy() {
         </p>
       </Reveal>
 
-      {/* HERO CARD — Triple W Rentals */}
+      {/* HERO CARD. Triple W Rentals */}
       <Reveal delay={0.1}>
         <div className="max-w-3xl mx-auto mb-6 proof-cards">
           <div
@@ -146,7 +146,7 @@ export default function FeaturedCaseStudy() {
             <div className="hero-card-columns" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32, alignItems: "start" }}>
               <style>{`@media (max-width: 767px) { .hero-card-columns { grid-template-columns: 1fr !important; } }`}</style>
 
-              {/* Left column — stats */}
+              {/* Left column. Stats */}
               <div>
                 <p
                   style={{
@@ -213,7 +213,7 @@ export default function FeaturedCaseStudy() {
                 </p>
               </div>
 
-              {/* Right column — dashboard screenshot */}
+              {/* Right column. Dashboard screenshot */}
               <div>
                 <div
                   style={{
@@ -346,7 +346,7 @@ export default function FeaturedCaseStudy() {
         </div>
       </Reveal>
 
-      {/* COMPACT GRID — 4 remaining clients */}
+      {/* COMPACT GRID. 4 remaining clients */}
       <Reveal delay={0.15}>
         <div className="max-w-3xl mx-auto mb-8 grid grid-cols-1 md:grid-cols-2 gap-4">
           {compactClients.map((client) => (

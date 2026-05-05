@@ -5,7 +5,7 @@ import { useLocale } from "@/context/LocaleContext";
 import { translations } from "@/lib/translations";
 
 const STICKY_TOP_BASE = 96; // px below the fixed 72px navbar
-const STICKY_OFFSET_STEP = 22; // px each card adds — fanned-deck stagger
+const STICKY_OFFSET_STEP = 22; // px each card adds. Fanned-deck stagger
 
 export default function WhatIBuildSlider() {
   const { locale } = useLocale();

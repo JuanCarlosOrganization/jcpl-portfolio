@@ -12,7 +12,7 @@ export default function ResultsRecentBuilds({ studies }: { studies: CaseStudy[] 
     >
       <div className="max-w-[1120px] mx-auto px-6">
         <h3 className="text-[13px] uppercase tracking-[0.14em] text-[#D4A853] text-center mb-10">
-          Recently delivered — Performance tracking in progress
+          Recently delivered. Performance tracking in progress
         </h3>
 
         <div className="grid gap-5 md:gap-7 grid-cols-1 md:grid-cols-3">

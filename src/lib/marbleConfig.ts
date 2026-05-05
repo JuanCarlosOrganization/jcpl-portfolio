@@ -1,5 +1,5 @@
 /**
- * Marble Rails Animation — tunable constants
+ * Marble Rails Animation. Tunable constants
  * Tweak here for colors, timing, spacing, and rail dimensions.
  */
 
@@ -64,7 +64,7 @@ export const TRAIL = {
   fadeFactor: 0.6,
 } as const;
 
-/* Scroll pin duration (vh) — longer for premium storytelling feel */
+/* Scroll pin duration (vh). longer for premium storytelling feel */
 export const SCROLL = {
   PIN_DURATION_DESKTOP: 600,
   PIN_DURATION_MOBILE: 220,
@@ -88,7 +88,7 @@ export const PROGRESS_SEGMENTS = {
   DROP_OFF_END: 1,
 } as const;
 
-/* Step text activation ranges — when each step is "active" (aligned with ball stages) */
+/* Step text activation ranges. When each step is "active" (aligned with ball stages) */
 export const STEP_ACTIVE_RANGES = [
   [0.02, 0.32], /* Diagnose: rail1 + dwell1 */
   [0.34, 0.62], /* Build: rail2 + dwell2 */

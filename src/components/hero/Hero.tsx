@@ -49,7 +49,7 @@ export default function Hero() {
 	}, []);
 
 	useEffect(() => {
-		// Skip parallax on touch devices — no mousemove events + saves battery
+		// Skip parallax on touch devices. No mousemove events + saves battery
 		if (window.matchMedia("(pointer: coarse)").matches) return;
 		window.addEventListener("mousemove", handleMouseMove, { passive: true });
 		return () => window.removeEventListener("mousemove", handleMouseMove);

@@ -34,7 +34,7 @@ export default function AboutCTA() {
 
   return (
     <section id="about-cta" className="relative overflow-hidden">
-      {/* Background radial — gold glow */}
+      {/* Background radial. Gold glow */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{

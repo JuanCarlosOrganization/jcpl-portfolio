@@ -31,7 +31,7 @@ export default function HeroWebGLBackground() {
 		// Mirror the official Unicorn Studio embed snippet
 		const u = w.UnicornStudio;
 		if (u && u.init) {
-			// SDK already loaded — call init immediately or after DOM ready
+			// SDK already loaded. Call init immediately or after DOM ready
 			if (document.readyState === "loading") {
 				document.addEventListener("DOMContentLoaded", () => u.init(), { once: true });
 			} else {
@@ -40,7 +40,7 @@ export default function HeroWebGLBackground() {
 			return;
 		}
 
-		// SDK not yet loaded — set sentinel and inject script once
+		// SDK not yet loaded. Set sentinel and inject script once
 		if (!document.getElementById(SCRIPT_ID)) {
 			w.UnicornStudio = { isInitialized: false };
 			const script = document.createElement("script");
@@ -63,7 +63,7 @@ export default function HeroWebGLBackground() {
 
 	return (
 		<div ref={wrapRef} className="hero-webgl-wrap" aria-hidden="true">
-			{/* Scale(1.06) ensures no letterboxing — canvas cover via CSS */}
+			{/* Scale(1.06) ensures no letterboxing. Canvas cover via CSS */}
 			<div
 				data-us-project={PROJECT_ID}
 				style={{

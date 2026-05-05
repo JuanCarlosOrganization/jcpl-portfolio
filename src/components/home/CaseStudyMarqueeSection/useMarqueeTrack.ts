@@ -8,7 +8,7 @@ type Args = {
   baseSpeed: number;
   /** How strongly scrollY velocity nudges the track. */
   velocityMultiplier?: number;
-  /** Disable the rAF loop (e.g. reduced-motion). */
+  /** Disable the rAF loop (e.g. Reduced-motion). */
   enabled?: boolean;
 };
 
@@ -64,7 +64,7 @@ export function useMarqueeTrack({
     ro.observe(track);
     if (viewportRef.current) ro.observe(viewportRef.current);
 
-    // Images change track width when they decode — re-measure on load.
+    // Images change track width when they decode. Re-measure on load.
     const imgs = Array.from(track.querySelectorAll("img"));
     let pending = imgs.length;
     const onImg = () => {

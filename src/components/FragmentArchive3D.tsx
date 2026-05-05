@@ -5,7 +5,7 @@ import { useTexture } from '@react-three/drei'
 import { useRef, useState, useEffect, Suspense } from 'react'
 import type { Group, Mesh } from 'three'
 
-/* Fixed z-offsets — no Math.random() to avoid hydration drift */
+/* Fixed z-offsets. No Math.random() to avoid hydration drift */
 const Z_OFFSETS = [0.10, 0.25, 0.05, 0.20, 0.15, 0.30, 0.08, 0.22, 0.12]
 
 /* ─── Single image plane ─────────────────────────────────────────────────── */

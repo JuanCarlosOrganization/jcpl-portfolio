@@ -63,7 +63,7 @@ export default function AddOnsTable() {
                       key={i}
                       className="px-6 py-4 text-center text-[13px]"
                     >
-                      {price === "—" ? (
+                      {price === "," ? (
                         <span className="text-sv-text-sub/60">−</span>
                       ) : price === "Included" ? (
                         <span className="text-sv-primary font-medium">

@@ -3,10 +3,10 @@
 import { forwardRef } from "react";
 
 /**
- * IntroBackground — Deep ink luxury backdrop for the intro phase.
+ * IntroBackground. Deep ink luxury backdrop for the intro phase.
  *
  * Old-money Monaco: charcoal depth, subtle radial warmth, zero distraction.
- * Pure CSS — no JS animation cost. GSAP controls opacity externally.
+ * Pure CSS. no JS animation cost. GSAP controls opacity externally.
  */
 const IntroBackground = forwardRef<HTMLDivElement>((_, ref) => {
   return (

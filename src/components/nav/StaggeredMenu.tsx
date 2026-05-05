@@ -282,7 +282,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
         if (itemEls.length) gsap.set(itemEls, { yPercent: 140, rotate: 10 });
         const nums = panel.querySelectorAll('.sm-panel-list[data-numbering] .sm-panel-item');
         if (nums.length) gsap.set(nums, { '--sm-num-opacity': 0 } as gsap.TweenVars);
-        // Unlock scroll AFTER animation completes — prevents iOS scroll position jump
+        // Unlock scroll AFTER animation completes. Prevents iOS scroll position jump
         unlockScroll();
         busyRef.current = false;
       },
@@ -426,7 +426,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
       data-position={position}
       data-open={open || undefined}
     >
-      {/* Prelayers — always in DOM so GSAP can animate them */}
+      {/* Prelayers. Always in DOM so GSAP can animate them */}
       <div ref={preLayersRef} className="sm-prelayers" aria-hidden="true">
         {(() => {
           const raw = colors && colors.length ? colors.slice(0, 4) : ['#1e1e22', '#35353c'];
@@ -438,7 +438,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
         })()}
       </div>
 
-      {/* Panel — always in DOM so GSAP can animate slide in/out */}
+      {/* Panel. Always in DOM so GSAP can animate slide in/out */}
       <aside
         id="staggered-menu-panel"
         ref={panelRef}

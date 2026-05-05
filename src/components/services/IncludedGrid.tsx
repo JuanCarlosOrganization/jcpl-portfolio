@@ -26,7 +26,7 @@ export default function IncludedGrid() {
       <Reveal className="text-center mb-10">
         <SectionLabel label="Every Plan Includes" className="mb-4" />
         <p className="text-sv-text-sub max-w-lg mx-auto text-[0.95rem] leading-relaxed">
-          Every engagement ships with measurable infrastructure — not just pages.
+          Every engagement ships with measurable infrastructure. Not just pages.
         </p>
       </Reveal>
 

@@ -1,6 +1,6 @@
 import CaseStudyStackScroll from "@/components/home/CaseStudyStackScroll";
 
-export const metadata = { title: "Preview — Stack Scroll" };
+export const metadata = { title: "Preview. Stack Scroll" };
 
 export default function PreviewStackPage() {
   return (

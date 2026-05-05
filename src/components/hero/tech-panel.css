@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════
-   TECH PANEL — Premium rectangle where the laser
+   TECH PANEL. Premium rectangle where the laser
    beam terminates, with 3-layer visual treatment
 
    Layer A: Always-visible crisp border
@@ -99,7 +99,7 @@
 }
 
 /* ═══════════════════════════════════════════════════
-   Layer B: CHROMA EDGE ACCENT — animated border glow
+   Layer B: CHROMA EDGE ACCENT. animated border glow
    Uses ::before for a subtle rotating gradient on the border
    ═══════════════════════════════════════════════════ */
 .tp-panel::before {
@@ -150,7 +150,7 @@
 }
 
 /* ═══════════════════════════════════════════════════
-   Layer C: HIT-REACTIVE IMPACT LINE — synced with beam
+   Layer C: HIT-REACTIVE IMPACT LINE. synced with beam
    Uses ::after for a top-edge energy line that propagates
    center → edges on each beam cycle
    ═══════════════════════════════════════════════════ */
@@ -201,7 +201,7 @@
 }
 
 /* ═══════════════════════════════════════════════════
-   JUNCTION BRIDGE — smooths laser→panel seam
+   JUNCTION BRIDGE. smooths laser→panel seam
    Two-layer: tall soft bloom + tight bright core
    ═══════════════════════════════════════════════════ */
 .tp-junction {
@@ -260,7 +260,7 @@
 }
 
 /* ═══════════════════════════════════════════════════
-   IMPACT GLOW — radial bloom at beam strike point
+   IMPACT GLOW. radial bloom at beam strike point
    ═══════════════════════════════════════════════════ */
 .tp-impact {
   position: absolute;
@@ -302,7 +302,7 @@
 }
 
 /* ═══════════════════════════════════════════════════
-   ENERGY SPREAD — horizontal propagation center→edges
+   ENERGY SPREAD. horizontal propagation center→edges
    Primary pulse + secondary echo + top-edge line
    All synced to --beam-duration with --hit-delay offset
    ═══════════════════════════════════════════════════ */
@@ -334,7 +334,7 @@
   animation: tp-energy-flow var(--beam-duration) cubic-bezier(0.22, 1, 0.36, 1) var(--hit-delay) infinite;
 }
 
-/* Secondary echo wave — delayed, dimmer */
+/* Secondary echo wave. delayed, dimmer */
 .tp-energy-echo {
   position: absolute;
   top: 0;
@@ -370,7 +370,7 @@
   }
 }
 
-/* ── Sweep — light that travels L→R across top ── */
+/* ── Sweep. light that travels L→R across top ── */
 .tp-sweep {
   position: absolute;
   top: 0;
@@ -397,7 +397,7 @@
   100% { background-position: -200% 0; }
 }
 
-/* ── Edge glow lines — permanent subtle horizontal lines ── */
+/* ── Edge glow lines. permanent subtle horizontal lines ── */
 .tp-edge {
   position: absolute;
   top: 0;
@@ -462,7 +462,7 @@
 }
 
 /* ═══════════════════════════════════════════════════
-   LOGO CONTENT — Label + scrolling logos inside panel
+   LOGO CONTENT. Label + scrolling logos inside panel
    ═══════════════════════════════════════════════════ */
 .tp-logo-content {
   position: relative;

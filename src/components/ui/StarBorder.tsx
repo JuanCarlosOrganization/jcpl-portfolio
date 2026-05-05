@@ -23,7 +23,7 @@ interface StarBorderProps {
 }
 
 /**
- * StarBorder — premium animated border container.
+ * StarBorder. Premium animated border container.
  *
  * Usage:
  *   <StarBorder variant="accent" className="rounded-2xl">

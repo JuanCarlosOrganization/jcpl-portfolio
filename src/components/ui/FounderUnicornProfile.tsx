@@ -17,13 +17,13 @@ export default function FounderUnicornProfile() {
     );
 
     if (window.UnicornStudio?.init) {
-      // Already loaded — re-init to pick up this node
+      // Already loaded. Re-init to pick up this node
       setTimeout(initUS, 50);
     } else if (existingScript) {
-      // Script loading — wait for it
+      // Script loading. Wait for it
       setTimeout(initUS, 400);
     } else {
-      // First load — inject script
+      // First load. Inject script
       window.UnicornStudio = { isInitialized: false } as any;
       const s = document.createElement("script");
       s.src =

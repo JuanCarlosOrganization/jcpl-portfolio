@@ -11,19 +11,19 @@ export const SHIMMER_INTENSITY = 0.18; // sweep peak opacity (0–1)
 export const GLOW_INTENSITY = 0.08; // halo peak opacity (0–1)
 
 export interface LogoIntroHandle {
-  /** Outer container — GSAP transforms for scale + translate to top-left */
+  /** Outer container. GSAP transforms for scale + translate to top-left */
   containerEl: HTMLDivElement | null;
-  /** Image element — for additional GSAP control if needed */
+  /** Image element. For additional GSAP control if needed */
   imgEl: HTMLImageElement | null;
 }
 
 /**
- * LogoIntro — Premium logo entrance with starlight shimmer.
+ * LogoIntro. Premium logo entrance with starlight shimmer.
  *
  * 1. Logo fades in from opacity 0, scale 0.97 → 1.0 (ease-out, ~1.2s)
  * 2. Soft white radial glow fades in behind logo
  * 3. One-shot light sweep passes across the logo (left → right)
- * 4. Everything settles — logo stays visible, glow remains subtly
+ * 4. Everything settles. Logo stays visible, glow remains subtly
  *
  * Scroll animations (scale/translate to top-left) are controlled
  * externally by CinematicHero via the exposed refs.

@@ -11,7 +11,7 @@ import AutomationPipeline from "./AutomationPipeline";
 import AuthorityCompound from "./AuthorityCompound";
 import SystemDiagram from "./SystemDiagram";
 
-// Heavy R3F bundle — load only on demand
+// Heavy R3F bundle. Load only on demand
 const EngineCore = dynamic(() => import("./EngineCore"), { ssr: false });
 
 interface Props {
@@ -24,7 +24,7 @@ export default function VisualLayer({ progress }: Props) {
 
   return (
     <div className="growth-engine-visual-host absolute inset-0 z-20">
-      {/* EngineCore is special — visible during BOTH scene 1 and scene 7,
+      {/* EngineCore is special. Visible during BOTH scene 1 and scene 7,
           so it manages its own visibility internally rather than going
           through SceneVisualGate. */}
       <EngineCore scene1={scene1} scene7={scene7} progress={progress} />

@@ -50,7 +50,7 @@ export default function UnicornHeroBackground() {
       className="cb-unicorn-wrap"
       aria-hidden="true"
     >
-      {/* Unicorn Studio project container — aspect-ratio preserved via CSS */}
+      {/* Unicorn Studio project container. Aspect-ratio preserved via CSS */}
       <div
         data-us-project={PROJECT_ID}
         style={{

@@ -5,7 +5,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 import SectionLabel from "@/components/ui/SectionLabel";
 
 /**
- * Principles — 3 operating principles, equal height.
+ * Principles. 3 operating principles, equal height.
  * Brighter card bg, clearer border, refined hover, consistent badge.
  */
 export default function Principles() {
@@ -25,7 +25,7 @@ export default function Principles() {
               className="group relative flex flex-col gap-4 rounded-xl border border-[rgba(37,99,235,0.15)] bg-sv-surface p-6 h-full transition-all duration-300 ease-out cursor-default
                 hover:-translate-y-0.5 hover:border-[rgba(37,99,235,0.5)] hover:shadow-[0_4px_20px_rgba(37,99,235,0.10)]"
             >
-              {/* Numbered outlined badge — consistent 36×36 */}
+              {/* Numbered outlined badge. Consistent 36×36 */}
               <span
                 className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-[1.5px] border-sv-primary text-xs font-bold text-sv-primary tabular-nums transition-all duration-300 group-hover:bg-[rgba(37,99,235,0.10)] group-hover:shadow-[0_0_10px_rgba(37,99,235,0.20)]"
                 aria-hidden="true"

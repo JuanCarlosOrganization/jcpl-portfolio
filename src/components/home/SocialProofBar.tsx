@@ -36,7 +36,7 @@ export default function SocialProofBar() {
         style={{ paddingTop: "2.75rem", paddingBottom: "3.75rem" }}
       >
 
-        {/* Section label row — mirrors confidence rail label style */}
+        {/* Section label row. Mirrors confidence rail label style */}
         <div className="flex items-center gap-4" style={{ marginBottom: "1.75rem" }}>
           <span
             style={{
@@ -130,7 +130,7 @@ export default function SocialProofBar() {
                   {client.industry}
                 </p>
 
-                {/* Result pill — gold instead of emerald */}
+                {/* Result pill. Gold instead of emerald */}
                 <div
                   style={{
                     display: "inline-flex",

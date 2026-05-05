@@ -34,7 +34,7 @@ function ClipboardIcon() {
 }
 
 /**
- * AboutHero — 12-col grid: left 7 cols copy, right 5 cols portrait.
+ * AboutHero. 12-col grid: left 7 cols copy, right 5 cols portrait.
  * Two CTAs + trust row. Portrait wrapped in CSS overlay. Animation UNTOUCHED.
  */
 export default function AboutHero() {
@@ -122,7 +122,7 @@ export default function AboutHero() {
         </AnimatedSection>
       </div>
 
-      {/* ── Right: Portrait (5 cols) — Unicorn Studio animated portrait ── */}
+      {/* ── Right: Portrait (5 cols). Unicorn Studio animated portrait ── */}
       <div className="lg:col-span-5 w-full h-[480px] sm:h-[600px] lg:h-[844px] max-w-[390px] mx-auto">
         <FounderUnicornProfile />
       </div>

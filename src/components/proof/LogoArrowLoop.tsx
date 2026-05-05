@@ -46,11 +46,11 @@ const LOOP_COUNT = 3;
 // Depth stagger per position within a 5-card set:
 // centre card is most prominent, edges recede.
 const STAGGER = [
-  { scale: 0.82, opacity: 0.48 }, // 0 — edge
-  { scale: 0.91, opacity: 0.70 }, // 1 — mid
-  { scale: 1.00, opacity: 1.00 }, // 2 — centre
-  { scale: 0.91, opacity: 0.70 }, // 3 — mid
-  { scale: 0.82, opacity: 0.48 }, // 4 — edge
+  { scale: 0.82, opacity: 0.48 }, // 0. edge
+  { scale: 0.91, opacity: 0.70 }, // 1. mid
+  { scale: 1.00, opacity: 1.00 }, // 2. centre
+  { scale: 0.91, opacity: 0.70 }, // 3. mid
+  { scale: 0.82, opacity: 0.48 }, // 4. edge
 ];
 
 export default function LogoArrowLoop() {
@@ -66,7 +66,7 @@ export default function LogoArrowLoop() {
     track.style.setProperty("--lal-offset", `-${setWidth}px`);
   }, []);
 
-  // Spread pattern — all three clone sets come from identical source data.
+  // Spread pattern. All three clone sets come from identical source data.
   // Every card is a direct child of the same lal-track parent.
   const items = [...LOGOS, ...LOGOS, ...LOGOS];
 
@@ -83,7 +83,7 @@ export default function LogoArrowLoop() {
                   key={`${logo.name}-${i}`}
                   className="lal-card"
                   style={{
-                    // Tilt each card to match the direction of travel — like
+                    // Tilt each card to match the direction of travel. Like
                     // polaroids physically sliding up a wire. Combined with the
                     // depth stagger this gives a sense of real physical depth.
                     transform: `rotate(-12deg) scale(${scale})`,
@@ -164,7 +164,7 @@ export default function LogoArrowLoop() {
          * backdrop-filter + translucent bg lifts the card off the dark section.
          * box-shadow adds real depth.  The rotate(-12deg) tilt (applied inline
          * alongside the depth-stagger scale) makes each card lean into the
-         * direction of travel — like a polaroid physically on a moving wire.
+         * direction of travel. Like a polaroid physically on a moving wire.
          */
         .lal-card {
           flex-shrink: 0;
@@ -221,7 +221,7 @@ export default function LogoArrowLoop() {
           animation-play-state: paused;
         }
 
-        /* Mobile: flat horizontal marquee — remove diagonal rotation and card tilt */
+        /* Mobile: flat horizontal marquee. Remove diagonal rotation and card tilt */
         @media (max-width: 767px) {
           .lal-section {
             height: 110px;

@@ -30,7 +30,7 @@ export default function PlanCard({ plan, billing, index }: Props) {
           }
         `}
         tabIndex={0}
-        aria-label={`${plan.name} plan — $${price} per month`}
+        aria-label={`${plan.name} plan. $${price} per month`}
       >
         {/* Featured gradient top border */}
         {isFeatured && (

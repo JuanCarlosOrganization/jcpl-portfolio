@@ -18,7 +18,7 @@ const Aurora = dynamic(() => import("@/components/motion/Aurora"), {
 });
 
 /* ═══════════════════════════════════════════════════
-   COPY — conversion-optimized, outcome-driven
+   COPY. conversion-optimized, outcome-driven
    ═══════════════════════════════════════════════════ */
 const EYEBROW = "Growth Architecture™";
 const HEADLINE_L1 = "Predictable Revenue Growth";
@@ -38,7 +38,7 @@ const PROOF_ITEMS = [
 const AUTHORITY_LINE =
   "Selectively working with a limited number of service brands per quarter.";
 
-/* Aurora color scheme — deep ink navy / electric blue, kept very subtle */
+/* Aurora color scheme. Deep ink navy / electric blue, kept very subtle */
 const AURORA_COLORS = ["#0a1020", "#1a3a5c", "#0a1020"];
 
 /* Framer Motion entrance variants for cinematic reveal */
@@ -77,7 +77,7 @@ export default function PremiumHero({ onLaserLand }: { onLaserLand?: () => void 
   const proofRef = useRef<HTMLDivElement>(null);
   const authorityRef = useRef<HTMLParagraphElement>(null);
 
-  /* scroll-driven laser fade — directly via DOM for zero conflicts */
+  /* scroll-driven laser fade. Directly via DOM for zero conflicts */
   const handleScroll = useCallback(() => {
     const section = sectionRef.current;
     const laser = laserRef.current;
@@ -118,15 +118,15 @@ export default function PremiumHero({ onLaserLand }: { onLaserLand?: () => void 
   }, []);
 
   return (
-    <section ref={sectionRef} className="ph" aria-label="Hero — Growth Systems">
+    <section ref={sectionRef} className="ph" aria-label="Hero. Growth Systems">
       {/* ═══════════════════════════════════════════
-          LAYER 0 — Deep space base (pure CSS gradient)
+          LAYER 0. Deep space base (pure CSS gradient)
           z-index: 0
           ═══════════════════════════════════════════ */}
       <div className="ph-layer ph-base" aria-hidden="true" />
 
       {/* ═══════════════════════════════════════════
-          LAYER 1 — Aurora WebGL background (subtle, moody)
+          LAYER 1. Aurora WebGL background (subtle, moody)
           z-index: 1
           ═══════════════════════════════════════════ */}
       <div className="ph-layer ph-aurora" aria-hidden="true">
@@ -139,13 +139,13 @@ export default function PremiumHero({ onLaserLand }: { onLaserLand?: () => void 
       </div>
 
       {/* ═══════════════════════════════════════════
-          LAYER 2 — Cinematic vignette (darkens edges)
+          LAYER 2. Cinematic vignette (darkens edges)
           z-index: 2
           ═══════════════════════════════════════════ */}
       <div className="ph-layer ph-vignette" aria-hidden="true" />
 
       {/* ═══════════════════════════════════════════
-          LAYER 2.5 — Floating particle field for depth
+          LAYER 2.5. Floating particle field for depth
           z-index: 2
           ═══════════════════════════════════════════ */}
       <div className="ph-layer ph-particles" aria-hidden="true">
@@ -153,8 +153,8 @@ export default function PremiumHero({ onLaserLand }: { onLaserLand?: () => void 
       </div>
 
       {/* ═══════════════════════════════════════════
-          LAYER 3 — LASER FLOW (dominant focal point)
-          z-index: 3  — centered, extends into section 2
+          LAYER 3. LASER FLOW (dominant focal point)
+          z-index: 3 . centered, extends into section 2
           ═══════════════════════════════════════════ */}
       <div
         ref={laserRef}
@@ -183,26 +183,26 @@ export default function PremiumHero({ onLaserLand }: { onLaserLand?: () => void 
       </div>
 
       {/* ═══════════════════════════════════════════
-          LAYER 4 — Laser glow bloom (CSS radial overlay)
-          z-index: 4  — adds depth-of-field glow around beam
+          LAYER 4. Laser glow bloom (CSS radial overlay)
+          z-index: 4 . adds depth-of-field glow around beam
           ═══════════════════════════════════════════ */}
       <div className="ph-layer ph-bloom" aria-hidden="true" />
 
       {/* ═══════════════════════════════════════════
-          LAYER 5 — Film grain texture
+          LAYER 5. Film grain texture
           z-index: 5
           ═══════════════════════════════════════════ */}
       <div className="ph-layer ph-grain" aria-hidden="true" />
 
       {/* ═══════════════════════════════════════════
-          LAYER 6 — Bottom gradient fade (seamless transition
+          LAYER 6. Bottom gradient fade (seamless transition
           to the next section)
           z-index: 6
           ═══════════════════════════════════════════ */}
       <div className="ph-layer ph-bottom-fade" aria-hidden="true" />
 
       {/* ═══════════════════════════════════════════
-          LAYER 7 — Content overlay
+          LAYER 7. Content overlay
           z-index: 10
           ═══════════════════════════════════════════ */}
       <div className="ph-content">

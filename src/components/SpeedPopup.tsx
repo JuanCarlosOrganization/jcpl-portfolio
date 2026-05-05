@@ -6,7 +6,7 @@ import { translations } from "@/lib/translations";
 import { useLenis } from "@/context/LenisContext";
 
 /**
- * SpeedPopup — Premium informational modal.
+ * SpeedPopup. Premium informational modal.
  * Appears after 45s, once per session.
  * On close: stays on current scroll position (no jump).
  */
@@ -27,13 +27,16 @@ export default function SpeedPopup() {
     const timer = setTimeout(() => {
       setVisible(true);
       sessionStorage.setItem("speed-popup-shown", "1");
-      requestAnimationFrame(() => closeBtnRef.current?.focus());
+      // preventScroll: true keeps the user where they are, no jump-to-popup
+      requestAnimationFrame(() =>
+        closeBtnRef.current?.focus({ preventScroll: true }),
+      );
     }, 45000);
 
     return () => clearTimeout(timer);
   }, []);
 
-  /* Close handler — simple hide, no scroll manipulation */
+  /* Close handler. Simple hide, no scroll manipulation */
   const close = useCallback(() => {
     setClosing(true);
     setTimeout(() => {
@@ -42,18 +45,51 @@ export default function SpeedPopup() {
     }, 300);
   }, []);
 
-  /* Pause/resume Lenis only (no body position hacks) */
+  /* Pause Lenis + lock the page at its CURRENT scroll position so the
+     popup never yanks the user back up. We snapshot scrollY, fix the
+     body in place via translate (preserving paint), then restore on close. */
   useEffect(() => {
     const lenis = lenisRef.current;
+    const html = document.documentElement;
+    const body = document.body;
+
     if (visible && !closing) {
+      const scrollY = window.scrollY;
       lenis?.stop();
-      document.body.style.overflow = "hidden";
+      // Lock without changing visual scroll position.
+      // Using `overflow: hidden` + `top: -scrollY` keeps the page exactly where it was.
+      body.style.position = "fixed";
+      body.style.top = `-${scrollY}px`;
+      body.style.left = "0";
+      body.style.right = "0";
+      body.style.width = "100%";
+      body.dataset.lockedScrollY = String(scrollY);
+      html.style.scrollBehavior = "auto";
     } else if (!visible) {
-      document.body.style.overflow = "";
+      const saved = parseInt(body.dataset.lockedScrollY || "0", 10);
+      body.style.position = "";
+      body.style.top = "";
+      body.style.left = "";
+      body.style.right = "";
+      body.style.width = "";
+      delete body.dataset.lockedScrollY;
+      if (saved > 0) {
+        window.scrollTo(0, saved);
+      }
+      html.style.scrollBehavior = "";
       lenis?.start();
     }
     return () => {
-      document.body.style.overflow = "";
+      // Defensive cleanup if component unmounts mid-popup
+      const saved = parseInt(body.dataset.lockedScrollY || "0", 10);
+      body.style.position = "";
+      body.style.top = "";
+      body.style.left = "";
+      body.style.right = "";
+      body.style.width = "";
+      delete body.dataset.lockedScrollY;
+      if (saved > 0) window.scrollTo(0, saved);
+      html.style.scrollBehavior = "";
       lenisRef.current?.start();
     };
   }, [visible, closing, lenisRef]);

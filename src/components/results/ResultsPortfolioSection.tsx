@@ -37,7 +37,7 @@ export default function ResultsPortfolioSection({ recent, building }: Props) {
           </div>
         )}
 
-        {/* In the Field — muted, visually separated */}
+        {/* In the Field. Muted, visually separated */}
         {building.length > 0 && (
           <div>
             <div className="flex items-center gap-3 mb-4">
