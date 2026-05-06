@@ -89,7 +89,7 @@ const cases: CaseStudyData[] = [
 
 export default function CaseStudyStackScroll() {
   const layout = useLayout();
-  const isMobile = layout === "mobile";
+  const isMobile = layout !== "desktop";
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
