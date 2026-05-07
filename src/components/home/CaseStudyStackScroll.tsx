@@ -564,7 +564,7 @@ function CaseCard({
                   gap: 5,
                 }}
               >
-                {caseItem.tags.slice(0, 3).map((tag) => (
+                {caseItem.tags.map((tag) => (
                   <span
                     key={tag}
                     style={{
