@@ -41,7 +41,7 @@ export default function DiagnosticFormLinear() {
   const { locale } = useLocale();
   const t = translations[locale].homepage.diagnosticForm;
   const layout = useLayout();
-  const isMobile = layout === "mobile";
+  const isMobile = layout !== "desktop";
 
   const steps: StepDef[] = [
     {
