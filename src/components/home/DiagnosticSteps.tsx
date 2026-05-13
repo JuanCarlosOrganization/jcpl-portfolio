@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionWrapper from "@/components/ui/SectionWrapper";
@@ -9,6 +9,12 @@ import Link from "next/link";
 import { prefersReducedMotion } from "@/lib/motion";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const CARD_FROM = [
+  { x: -28, y: 0 },
+  { x: 0, y: 28 },
+  { x: 28, y: 0 },
+] as const;
 
 const STEPS = [
   {
@@ -32,41 +38,46 @@ export default function DiagnosticSteps() {
   const sectionRef = useRef<HTMLElement>(null);
   const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  useEffect(() => {
-    if (prefersReducedMotion()) return;
+  useLayoutEffect(() => {
+    const cards = stepRefs.current.filter(Boolean) as HTMLDivElement[];
+    if (!cards.length) return;
 
-    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+    if (prefersReducedMotion()) {
+      gsap.set(cards, { opacity: 1, x: 0, y: 0 });
+      return;
+    }
+
     const ctx = gsap.context(() => {
+      const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+      // Mobile. Simple fade with stagger
       if (isMobile) {
+        gsap.set(cards, { opacity: 0 });
         ScrollTrigger.create({
           trigger: sectionRef.current,
           start: "top 80%",
-          onEnter: () => {
-            gsap.fromTo(
-              stepRefs.current.filter(Boolean),
-              { opacity: 0 },
-              { opacity: 1, duration: 0.5, stagger: 0.2, ease: "power2.out" }
-            );
-          },
           once: true,
+          onEnter: () =>
+            gsap.to(cards, {
+              opacity: 1,
+              duration: 0.5,
+              stagger: 0.15,
+              ease: "power2.out",
+            }),
         });
-      } else {
-        gsap.fromTo(
-          ".diagnostic-card-1",
-          { opacity: 0, x: -28 },
-          { opacity: 1, x: 0, duration: 0.6, ease: "power2.out", scrollTrigger: { trigger: ".diagnostic-section", start: "top 78%", once: true } }
-        );
-        gsap.fromTo(
-          ".diagnostic-card-2",
-          { opacity: 0, y: 28 },
-          { opacity: 1, y: 0, duration: 0.6, delay: 0.12, ease: "power2.out", scrollTrigger: { trigger: ".diagnostic-section", start: "top 78%", once: true } }
-        );
-        gsap.fromTo(
-          ".diagnostic-card-3",
-          { opacity: 0, x: 28 },
-          { opacity: 1, x: 0, duration: 0.6, delay: 0.24, ease: "power2.out", scrollTrigger: { trigger: ".diagnostic-section", start: "top 78%", once: true } }
-        );
+        return;
       }
+
+      // Desktop. Single timeline drives all three cards
+      cards.forEach((card, i) => {
+        gsap.set(card, { opacity: 0, x: CARD_FROM[i]?.x ?? 0, y: CARD_FROM[i]?.y ?? 0 });
+      });
+
+      const tl = gsap.timeline({
+        scrollTrigger: { trigger: ".diagnostic-section", start: "top 78%", once: true },
+        defaults: { duration: 0.6, ease: "power2.out" },
+      });
+      tl.to(cards, { opacity: 1, x: 0, y: 0, stagger: 0.12 });
     }, sectionRef);
 
     return () => ctx.revert();
@@ -80,7 +91,7 @@ export default function DiagnosticSteps() {
       style={{ background: "#0D0B09" }}
     >
       <div className="max-w-4xl mx-auto text-center mb-12">
-        <SectionLabel label="THE DIAGNOSTIC" className="mb-4 !text-[#D4A853]" />
+        <SectionLabel label="THE DIAGNOSTIC" className="mb-4 !text-[var(--brand-accent,#D4A853)]" />
         <h2
           className="text-[clamp(28px,4vw,40px)] font-bold text-white leading-tight mb-6"
           style={{ maxWidth: 640, margin: "0 auto 24px" }}
@@ -94,18 +105,18 @@ export default function DiagnosticSteps() {
           <div
             key={step.num}
             ref={(el) => { stepRefs.current[i] = el; }}
-            className={`rounded-xl lift-card diagnostic-card-${i + 1}`}
+            className={`rounded-xl lift-card diagnostic-card diagnostic-card-${i + 1}`}
             style={{
-              opacity: 1,
               padding: "28px 28px 32px 28px",
               background: "#1E1A14",
               border: "1px solid #2A2318",
-              borderTop: "3px solid #D4A853",
+              borderTop: "3px solid var(--brand-accent, #D4A853)",
+              willChange: "transform, opacity",
             }}
           >
             <div
               className="step-number mb-4"
-              style={{ fontSize: "2rem", color: "#D4A853", fontWeight: 800 }}
+              style={{ fontSize: "2rem", color: "var(--brand-accent, #D4A853)", fontWeight: 800 }}
             >
               {step.num}
             </div>
@@ -133,9 +144,9 @@ export default function DiagnosticSteps() {
         <Link
           href="/apply"
           className="inline-flex items-center justify-center gap-2 font-semibold text-[#0A0E1A] rounded-lg cta-primary cta-button"
-          style={{ background: "#D4A853", padding: "16px 32px" }}
+          style={{ background: "var(--brand-accent, #D4A853)", padding: "16px 32px" }}
           onMouseOver={(e) => { e.currentTarget.style.backgroundColor = "#C49A2A"; }}
-          onMouseOut={(e) => { e.currentTarget.style.backgroundColor = "#D4A853"; }}
+          onMouseOut={(e) => { e.currentTarget.style.backgroundColor = "var(--brand-accent, #D4A853)"; }}
         >
           Apply to be a Partner
           <span aria-hidden="true">→</span>

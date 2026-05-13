@@ -1,6 +1,7 @@
 "use client";
 
 import { type ReactNode } from "react";
+import { MotionConfig } from "motion/react";
 import { LocaleProvider } from "@/context/LocaleContext";
 import SmoothScrollProvider from "@/components/ui/SmoothScrollProvider";
 import RouteScrollManager from "@/components/system/RouteScrollManager";
@@ -27,19 +28,23 @@ function SkipToContent() {
 export default function ClientAppShell({ children }: { children: ReactNode }) {
   return (
     <LocaleProvider>
-      <SkipToContent />
-      <ScrollProgressBar />
-      <SectionLabelAnimator />
-      <SmoothScrollProvider>
-        <RouteScrollManager />
-        <SiteNav />
-        <main id="main-content" className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
-        <BackToTop />
-        <SpeedPopup />
-      </SmoothScrollProvider>
+      {/* reducedMotion="user" makes every Framer Motion animation respect the
+          OS preference, so individual components don't have to check. */}
+      <MotionConfig reducedMotion="user">
+        <SkipToContent />
+        <ScrollProgressBar />
+        <SectionLabelAnimator />
+        <SmoothScrollProvider>
+          <RouteScrollManager />
+          <SiteNav />
+          <main id="main-content" className="min-h-screen">
+            {children}
+          </main>
+          <Footer />
+          <BackToTop />
+          <SpeedPopup />
+        </SmoothScrollProvider>
+      </MotionConfig>
     </LocaleProvider>
   );
 }

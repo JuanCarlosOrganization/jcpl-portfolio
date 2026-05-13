@@ -5,8 +5,18 @@
 import { useEffect, useRef, useState } from 'react';
 import { EffectComposer, RenderPass, EffectPass, BloomEffect, ChromaticAberrationEffect } from 'postprocessing';
 import * as THREE from 'three';
-import * as faceapi from 'face-api.js';
+import type * as FaceApiNS from 'face-api.js';
 import './GridScan.css';
+
+// face-api.js is ~150KB JS + multi-MB model weights. Only load when the webcam
+// feature is actually enabled (in practice, never on the live /results page).
+let faceapiPromise: Promise<typeof FaceApiNS> | null = null;
+const loadFaceApi = () => {
+  if (!faceapiPromise) {
+    faceapiPromise = import('face-api.js') as Promise<typeof FaceApiNS>;
+  }
+  return faceapiPromise;
+};
 
 const vert = `
 varying vec2 vUv;
@@ -697,9 +707,11 @@ export const GridScan = ({
   }, [enableGyro, uiFaceActive]);
 
   useEffect(() => {
+    if (!enableWebcam) return;
     let canceled = false;
     const load = async () => {
       try {
+        const faceapi = await loadFaceApi();
         await Promise.all([
           faceapi.nets.tinyFaceDetector.loadFromUri(modelsPath),
           faceapi.nets.faceLandmark68TinyNet.loadFromUri(modelsPath)
@@ -713,7 +725,7 @@ export const GridScan = ({
     return () => {
       canceled = true;
     };
-  }, [modelsPath]);
+  }, [enableWebcam, modelsPath]);
 
   useEffect(() => {
     let stop = false;
@@ -735,6 +747,7 @@ export const GridScan = ({
         return;
       }
 
+      const faceapi = await loadFaceApi();
       const opts = new faceapi.TinyFaceDetectorOptions({ inputSize: 320, scoreThreshold: 0.5 });
 
       const detect = async (ts: number) => {

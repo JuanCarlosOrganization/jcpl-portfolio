@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import "./hero-responsive.css";
 import { useLocale } from "@/context/LocaleContext";
 import { translations } from "@/lib/translations";
@@ -10,9 +11,28 @@ const UnicornScene = dynamic(() => import("unicornstudio-react/next"), {
   ssr: false,
 });
 
+function useHeroDpi() {
+  // Render the WebGL scene at lower DPI on mobile + when the user requests
+  // reduced motion. Halves the GPU pixel cost without visible quality loss.
+  const [dpi, setDpi] = useState(1);
+  useEffect(() => {
+    const compute = () => {
+      const mobile = window.matchMedia("(max-width: 768px)").matches;
+      const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      setDpi(reduced ? 0.75 : mobile ? 1 : 1.5);
+    };
+    compute();
+    const mq = window.matchMedia("(max-width: 768px)");
+    mq.addEventListener?.("change", compute);
+    return () => mq.removeEventListener?.("change", compute);
+  }, []);
+  return dpi;
+}
+
 export default function HeroSection() {
   const { locale } = useLocale();
   const t = translations[locale].homepage.heroSection;
+  const dpi = useHeroDpi();
   return (
     <section
       className="hero-section relative overflow-hidden"
@@ -41,7 +61,7 @@ export default function HeroSection() {
           sdkUrl="/unicornStudio.umd.js"
           width="100%"
           height="100%"
-          dpi={1.5}
+          dpi={dpi}
           scale={1}
         />
       </div>
@@ -69,7 +89,7 @@ export default function HeroSection() {
           flexDirection: "column",
           alignItems: "center",
           textAlign: "center",
-          paddingTop: 160,
+          paddingTop: "clamp(96px, 22vh, 160px)",
           maxWidth: 800,
           margin: "0 auto",
           paddingLeft: 24,
@@ -98,7 +118,7 @@ export default function HeroSection() {
           ))}
           <em className="blur-word" style={{
             animationDelay: `${t.headlineBefore.split(" ").length * 0.08}s`,
-            color: "#D4A853",
+            color: "var(--brand-accent, #D4A853)",
             fontStyle: "italic",
             textShadow: "0 2px 40px rgba(0,0,0,0.9), 0 0 60px rgba(212,168,83,0.3)",
           }}>{t.accentWord}</em>{" "}
@@ -174,7 +194,7 @@ export default function HeroSection() {
 
         /* ── Primary CTA. gold with white shimmer sweep ── */
         .primary-cta {
-          background: #D4A853;
+          background: var(--brand-accent, #D4A853);
           color: #0D0B09;
           border: none;
           border-radius: 6px;
@@ -237,7 +257,7 @@ export default function HeroSection() {
           text-shadow: 0 1px 12px rgba(0,0,0,1);
         }
         .hero-text-link:hover {
-          color: #D4A853;
+          color: var(--brand-accent, #D4A853);
         }
 
         /* ── Mobile: max-width 768px ── */

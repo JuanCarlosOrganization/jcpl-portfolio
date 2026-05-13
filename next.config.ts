@@ -7,7 +7,10 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   productionBrowserSourceMaps: false,
   turbopack: {
-    root: "/Users/jcpl/jcpl-portfolio",
+    root: path.resolve(__dirname),
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production" ? { exclude: ["error", "warn"] } : false,
   },
   images: {
     formats: ["image/avif", "image/webp"],

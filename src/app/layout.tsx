@@ -72,7 +72,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`dark ${cormorant.variable} ${dmSans.variable}`}>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        {/* DNS warm-up for analytics so first hit isn't a cold connection */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         {/* Preload hero WebGL assets so they download in parallel with HTML parse */}
         <link rel="preload" as="script" href="/unicornStudio.umd.js" />
         <link rel="preload" as="fetch" href="/scenes/hero-planet.json" crossOrigin="anonymous" />

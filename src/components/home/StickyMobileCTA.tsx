@@ -12,9 +12,10 @@ export default function StickyMobileCTA() {
   const [nearForm, setNearForm] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
+    let ticking = false;
+    const update = () => {
+      ticking = false;
       setVisible(window.scrollY > 600);
-
       const formEl = document.getElementById("book-call");
       if (formEl) {
         const rect = formEl.getBoundingClientRect();
@@ -23,6 +24,13 @@ export default function StickyMobileCTA() {
         setNearForm(false);
       }
     };
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+    update();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -36,17 +44,18 @@ export default function StickyMobileCTA() {
         background: "rgba(13, 11, 9, 0.96)",
         backdropFilter: "blur(8px)",
         borderTop: "1px solid rgba(212,168,83,0.12)",
-        padding: "12px 16px",
+        padding: "12px 16px calc(12px + env(safe-area-inset-bottom)) 16px",
         opacity: show ? 1 : 0,
         transform: show ? "translateY(0)" : "translateY(100%)",
         pointerEvents: show ? "auto" : "none",
+        willChange: "transform, opacity",
       }}
     >
       <Link
         href="/apply"
         className="text-[13px] font-semibold"
         style={{
-          background: "#D4A853",
+          background: "var(--brand-accent, #D4A853)",
           color: "#0D0B09",
           borderRadius: 6,
           padding: "10px 20px",

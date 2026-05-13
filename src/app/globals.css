@@ -66,7 +66,7 @@ html { scroll-behavior: smooth; }
   --color-sv-surface:     #131009;
   --color-sv-elevated:    #181410;
   --color-sv-soft:        #1A1510;
-  --color-sv-primary:     #D4A853;
+  --color-sv-primary:     var(--brand-accent, #D4A853);
   --color-sv-primary-hov: #C49A2A;
   --color-sv-muted:       #A69D8D;
   --color-sv-light:       #D2C9B8;
@@ -89,7 +89,7 @@ html { scroll-behavior: smooth; }
   --color-cream-200: #D2C9B8;
   --color-cream-300: #A69D8D;
   --color-cream-400: #756D63;
-  --color-gold-400: #D4A853;
+  --color-gold-400: var(--brand-accent, #D4A853);
   --color-gold-500: #C49A2A;
   --color-gold-600: #B08820;
 }
@@ -168,13 +168,13 @@ html { scroll-behavior: smooth; }
   --accent-glow: rgba(212, 168, 83, 0.15);
   --accent-soft: rgba(212, 168, 83, 0.08);
   --accent-subtle: rgba(212, 168, 83, 0.04);
-  --brand-alt: #D4A853;
+  --brand-alt: var(--brand-accent);
   --brand-subtle: rgba(212, 168, 83, 0.15);
-  --brand-heritage: #D4A853;
-  --brand-strong: #D4A853;
+  --brand-heritage: var(--brand-accent);
+  --brand-strong: var(--brand-accent);
 
   /* ─── CTA (dark text on gold) ─── */
-  --cta-bg: #D4A853;
+  --cta-bg: var(--brand-accent);
   --cta-hover: #C49A2A;
   --cta-text: #0A0E1A;
 
@@ -209,7 +209,7 @@ html { scroll-behavior: smooth; }
   --card-foreground:        oklch(0.145 0 0);
   --popover:        oklch(1 0 0);
   --popover-foreground:        oklch(0.145 0 0);
-  --primary:        #D4A853;
+  --primary:        var(--brand-accent);
   --primary-foreground:        #0D0B09;
   --secondary:        oklch(0.97 0 0);
   --secondary-foreground:        oklch(0.205 0 0);
@@ -967,24 +967,13 @@ img {
     0 0 32px rgba(212, 168, 83, 0.04);
 }
 
-/* Diagnostic Card 03. force full opacity (fix broken scroll animation) */
-.diagnostic-card-3,
-.diagnostic-card-3 * {
-  opacity: 1 !important;
-}
-.diagnostic-card-3 .step-number {
-  color: #D4A853 !important;
-  font-size: 2rem !important;
-  font-weight: 800 !important;
-}
-.diagnostic-card-3 .card-title,
-.diagnostic-card-3 h3 {
-  color: #F5F0E8 !important;
-  font-weight: 700 !important;
-}
-.diagnostic-card-3 .card-body,
-.diagnostic-card-3 p {
-  color: #D2C9B8 !important;
+/* Diagnostic card scroll reveal. GSAP drives transform + opacity.
+   No-JS / reduced-motion users see cards immediately via this fallback. */
+@media (prefers-reduced-motion: reduce) {
+  .diagnostic-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 /* Cal.com embed */
@@ -994,7 +983,7 @@ img {
 
 /* Case study card borders */
 .case-study-card-primary {
-  border-top: 3px solid #D4A853;
+  border-top: 3px solid var(--brand-accent);
 }
 
 .case-study-card-secondary {
@@ -1072,7 +1061,7 @@ img {
 .cta-primary {
   position: relative;
   overflow: hidden;
-  background: #D4A853;
+  background: var(--brand-accent);
   color: #0A0E1A;
   font-weight: 600;
   font-size: 1rem;
@@ -1160,8 +1149,8 @@ img {
 
 /* Secondary ghost buttons */
 .cta-secondary {
-  border: 1px solid #D4A853;
-  color: #D4A853;
+  border: 1px solid var(--brand-accent);
+  color: var(--brand-accent);
   background: transparent;
   padding: 16px 32px;
   border-radius: 8px;
@@ -1183,7 +1172,7 @@ img {
 
 .demo-cta-button {
   --bg-dark: #0D0B09;
-  --gold: #D4A853;
+  --gold: var(--brand-accent, #D4A853);
   --gold-light: #E8C97A;
   --gold-dim: #B08820;
   --navy: #0A0E1A;
@@ -1270,7 +1259,7 @@ img {
   transform-origin: left;
   width: 100%;
   height: 2rem;
-  background-color: #D4A853;
+  background-color: var(--gold, var(--brand-accent));
   mask: linear-gradient(transparent 0%, white 120%);
   animation: demoBorderRotate 2s linear infinite;
 }
@@ -1288,8 +1277,8 @@ img {
 }
 
 .demo-cta-sparkle .path {
-  fill: #D4A853;
-  stroke: #D4A853;
+  fill: var(--gold, var(--brand-accent));
+  stroke: var(--gold, var(--brand-accent));
   stroke-width: 0;
   transform-origin: center;
   transition: fill var(--speed), stroke var(--speed);
@@ -1318,7 +1307,7 @@ img {
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.01em;
-  background-image: linear-gradient(90deg, #D4A853 0%, #E8C97A 120%);
+  background-image: linear-gradient(90deg, var(--gold, var(--brand-accent)) 0%, #E8C97A 120%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -1558,7 +1547,7 @@ body::after {
   --card-foreground:        oklch(0.985 0 0);
   --popover:        oklch(0.205 0 0);
   --popover-foreground:        oklch(0.985 0 0);
-  --primary:        #D4A853;
+  --primary:        var(--brand-accent);
   --primary-foreground:        #0D0B09;
   --secondary:        oklch(0.269 0 0);
   --secondary-foreground:        oklch(0.985 0 0);
@@ -1602,7 +1591,7 @@ body::after {
 .record-card {
   background: rgba(255,255,255,0.02);
   border: 1px solid rgba(212,168,83,0.12);
-  border-left: 2px solid #D4A853;
+  border-left: 2px solid var(--brand-accent);
   cursor: pointer;
 }
 .record-card:hover {
@@ -1686,7 +1675,7 @@ body::after {
   padding: 0;
 }
 .slider-dot.active {
-  background: #D4A853;
+  background: var(--brand-accent);
   transform: scale(1.2);
 }
 
